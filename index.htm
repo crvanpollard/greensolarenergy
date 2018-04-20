@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
     
-      <title>DVRPC - Connections 2045 Major Regional Transportation Projects</title>
+      <title>DVRPC - Solar and Energy Beta Map</title>
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -23,8 +23,11 @@
 
       <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-      <script src="assets/data/TSP.js"></script>
       <script src="assets/data/EI.js"></script>
+      <script src="assets/data/ES.js"></script>
+      <script src="assets/data/GB.js"></script>
+      <script src="assets/data/SPG.js"></script>
+      <script src="assets/data/SPGicon.js"></script>
     <!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' /> -->
 
@@ -99,17 +102,34 @@
             overflow: auto;
             border-radius: 3px;
             }
-
             .marker {
-  background-image: url('assets/img/EI.png');
-  background-size: cover;
-  width: 28px;
-  height: 35px;
-  cursor: pointer;
-}
-
-
-        
+            background-image: url('assets/img/EI.png');
+            background-size: cover;
+            width: 28px;
+            height: 35px;
+            cursor: pointer;
+            }
+            .marker2 {
+            background-image: url('assets/img/ES.png');
+            background-size: cover;
+            width: 28px;
+            height: 35px;
+            cursor: pointer;
+            } 
+            .marker3 {
+            background-image: url('assets/img/GB.png');
+            background-size: cover;
+            width: 28px;
+            height: 35px;
+            cursor: pointer;
+            }
+            .marker4 {
+            background-image: url('assets/img/SPG.png');
+            background-size: cover;
+            width: 28px;
+            height: 35px;
+            cursor: pointer;
+            }
       </style>
   </head>
   
@@ -120,16 +140,22 @@
                <div class="panel-group" id="accordion">
                   <div class="panel panel-default">
                       <div class="panel-heading" id="card">
-                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#overlay-layers">Major Regional Transportation Projects
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#overlay-layers">Projects (toggle is not worKing yet)
                           </a>
                       </div>
                       <div id="overlay-layers" class="panel-collapse collapse in">
                           <div class="panel-body" style="padding: 0px 15px;margin-left: 10px;" id="hype">
                                 <div class="checkbox">
-                                <input id="EI" type="checkbox"  class="cb" onClick="toggleLayer('EI')" checked><img src='https://raw.githubusercontent.com/crvanpollard/MRP2045_Mapbox/master/assets/img/ex_rd.png'width='28' height='28' value="EI">&nbsp;Roadway System Expansion 
+                                <input id="EI" type="checkbox"  class="cb" onClick="toggleLayer('EI')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/EI.png'width='28' height='35' value="EI">&nbsp;Energy Innovation
                                 </div>   
                                 <div class="checkbox">
-                                <input id="TSP" type="checkbox"  class="cb" onClick="toggleLayer('TSP')" checked><img src='https://raw.githubusercontent.com/crvanpollard/MRP2045_Mapbox/master/assets/img/pr_tr.png'width='28' height='28' value="TSP">&nbsp; Transit System Preservation 
+                                <input id="ES" type="checkbox"  class="cb" onClick="toggleLayer('ES')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/ES.png'width='28' height='35' value="ES">&nbsp;Energy Storage
+                                </div>   
+                                <div class="checkbox">
+                                <input id="GB" type="checkbox"  class="cb" onClick="toggleLayer('GB')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/GB.png'width='28' height='35' value="GB">&nbsp;Green Buildings
+                                </div>   
+                                <div class="checkbox">
+                                <input id="SPG" type="checkbox"  class="cb" onClick="toggleLayer('SPG')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/SPG.png'width='28' height='35' value="SPG">&nbsp; Solar Power Generatation
                                 </div>   
                                <div id='info' class='info'></div>
                           </div>
@@ -140,8 +166,6 @@
 
       <div id="sidebar" class="col-sm-8">
         <div id="map" class="map"></div>
-  
-        <div class='map-overlay' id='pn'><div><p>Hover over a project!</p></div></div>
       
         <div id='main_legend' class='legend'>
             <div class="expand-one"><i class="glyphicon glyphicon-minus"></i>&nbsp;&nbsp;Legend</div> 

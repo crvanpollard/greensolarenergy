@@ -1,7 +1,8 @@
-    var TSP;
     var EI;
-    var menu = document.getElementById('menu');
-    var info = document.getElementById('info');
+    var SPG;
+    var ES;
+    var GB;
+    var SPGicon;
     var geojson;
 
   function toggleLayer(id)
@@ -14,14 +15,11 @@
             map.setLayoutProperty(id, 'visibility', 'none');
             }
         }
-  // This will let you use the .remove() function later on
-  if (!('remove' in Element.prototype)) {
-    Element.prototype.remove = function() {
-      if (this.parentNode) {
-          this.parentNode.removeChild(this);
-      }
-    };
-  }
+ // When the checkbox changes, update the visibility of the layer.
+ //           input.addEventListener('change', function(e) {
+ //               map.setLayoutProperty(layerID, 'visibility',
+ //                   e.target.checked ? 'visible' : 'none');
+ //           });
 
 // open/close legend
    $(function () {
@@ -43,7 +41,7 @@
     bearing: 20, // Rotate Philly ~9° off of north, thanks Billy Penn.
     pitch: 50,
     zoom: 9,
-     attributionControl: false
+    attributionControl: false
   });
 
     function goHome() {
@@ -84,11 +82,11 @@ document.getElementById('zoomtoregion').addEventListener('click', function () {
 map.on('load', function () {
 
     map.addLayer({
-        'id': 'TSP',
+        'id': 'SPG',
         'type': 'circle',
         'source': {
             'type': 'geojson',
-            'data': TSP
+            'data': SPG
         },
         'paint': {
             'circle-radius': 4,
@@ -98,35 +96,35 @@ map.on('load', function () {
             }
         });
       map.addLayer({
-        "id": "TSP-hover",
+        "id": "SPG-hover",
         'type': 'circle',
         'source': {
             'type': 'geojson',
-            'data': TSP
+            'data': SPG
         },
         'paint': {
             'circle-radius': 6,
             'circle-color': 'red'
            
         },
-        "filter": ["==", "FACILITY", ""]
+        "filter": ["==", "name", ""]
     });
 
     // When the user moves their mouse over the states-fill layer, we'll update the filter in
     // the state-fills-hover layer to only show the matching state, thus making a hover effect.
-    map.on('mousemove', 'TSP', function (e) {
-        map.setFilter('TSP-hover', ['==', 'FACILITY', e.features[0].properties.FACILITY]);
+    map.on('mousemove', 'SPG', function (e) {
+        map.setFilter('SPG-hover', ['==', 'name', e.features[0].properties.name]);
     });
 
     // Reset the state-fills-hover layer's filter when the mouse leaves the layer.
     map.on('mouseleave', 'TSP', function (e) {
-        map.setFilter('TSP-hover', ['==', 'FACILITY', '']);
+        map.setFilter('TSP-hover', ['==', 'name', '']);
     });
  // When a click event occurs on a feature in the places layer, open a popup at the
     // location of the feature, with description HTML from its properties.
-    map.on('click', 'TSP', function (e) {
+    map.on('click', 'SPG', function (e) {
     var features = map.queryRenderedFeatures(e.point, {
-        layers: ['TSP']
+        layers: ['SPG']
       });
 
       if (!features.length) {
@@ -134,7 +132,7 @@ map.on('load', function () {
       }
 
       var feature = features[0];
-        var content = '<h4 style="color:white;background-color:rgb(105,136,58);padding: 3px;">'+ feature.properties.FACILITY+'</h4>'
+        var content = '<h4 style="color:white;background-color:rgb(105,136,58);padding: 3px;">'+ feature.properties.name+'</h4>'
         +'<B>Project Scope:</B> '+ feature.properties.PROJSCOPE  
         +'<br><B>Location:</B> '+ feature.properties.LOC
         +'<br><B>State:</B> '+ feature.properties.State
@@ -154,12 +152,12 @@ map.on('load', function () {
     });
 
     // Change the cursor to a pointer when the mouse is over the places layer.
-    map.on('mouseenter', 'TSP', function () {
+    map.on('mouseenter', 'SPG', function () {
         map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'TSP', function () {
+    map.on('mouseleave', 'SPG', function () {
         map.getCanvas().style.cursor = '';
     });
 
@@ -169,28 +167,24 @@ map.on('load', function () {
         closeOnClick: false
     });
 
-    map.on('mouseenter', 'TSP', function(e) {
+    map.on('mouseenter', 'SPG', function(e) {
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = 'pointer';
-
         // Populate the popup and set its coordinates
         // based on the feature found.
         popup.setLngLat(e.features[0].geometry.coordinates)
-            .setHTML(e.features[0].properties.FACILITY)
+            .setHTML(e.features[0].properties.name)
             .addTo(map);
     });
 
-    map.on('mouseleave', 'TSP', function() {
+    map.on('mouseleave', 'SPG', function() {
         map.getCanvas().style.cursor = '';
         popup.remove();
     });
 
     });
 
-
-
     map.on('load', function () {
-
     map.addLayer({
         "id": "EI",
         "type": "symbol",
@@ -200,7 +194,7 @@ map.on('load', function () {
         }
     });
 
-        // add markers to map
+    // add markers to map
     EI.features.forEach(function(marker) {
     // create a DOM element for the marker
     var el = document.createElement('div');
@@ -217,3 +211,83 @@ map.on('load', function () {
 });
 });
 
+map.on('load', function () {
+    map.addLayer({
+        "id": "ES",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": ES
+        }
+    });
+
+    // add markers to map
+    ES.features.forEach(function(marker) {
+    // create a DOM element for the marker
+    var es = document.createElement('div');
+    es.className = 'marker2';
+    es.style.backgroundImage = 'assets/img/ES.png';
+    es.addEventListener('click', function() {
+        window.alert('look!!');
+    });
+
+    // add marker to map
+    new mapboxgl.Marker(es)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+});
+});
+
+map.on('load', function () {
+    map.addLayer({
+        "id": "GB",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": GB
+        }
+    });
+
+    // add markers to map
+    GB.features.forEach(function(marker) {
+    // create a DOM element for the marker
+    var gb = document.createElement('div');
+    gb.className = 'marker3';
+    gb.style.backgroundImage = 'assets/img/GB.png';
+    gb.addEventListener('click', function() {
+        window.alert('look!!');
+    });
+
+    // add marker to map
+    new mapboxgl.Marker(gb)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+});
+});
+
+map.on('load', function () {
+    map.addLayer({
+        "id": "SPGicon",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": SPGicon
+        }
+    });
+
+    // add markers to map
+    SPGicon.features.forEach(function(marker) {
+    // create a DOM element for the marker
+    var spg = document.createElement('div');
+    spg.className = 'marker4';
+    spg.style.backgroundImage = 'assets/img/SPG.png';
+    spg.addEventListener('click', function() {
+        window.alert('look!!');
+    });
+
+    // add marker to map
+    new mapboxgl.Marker(spg)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+});
+});

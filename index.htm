@@ -27,14 +27,12 @@
       <script src="assets/data/ES.js"></script>
       <script src="assets/data/GB.js"></script>
       <script src="assets/data/SPG.js"></script>
-      <script src="assets/data/SPGicon.js"></script>
     <!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' /> -->
 
-     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
-     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
     
-   
       <style>
         #zoomtoregion{
             position: absolute;
@@ -103,33 +101,33 @@
             border-radius: 3px;
             }
             .marker {
-            background-image: url('assets/img/EI.png');
-            background-size: cover;
-            width: 28px;
-            height: 35px;
-            cursor: pointer;
-            }
-            .marker2 {
-            background-image: url('assets/img/ES.png');
-            background-size: cover;
-            width: 28px;
-            height: 35px;
-            cursor: pointer;
-            } 
-            .marker3 {
-            background-image: url('assets/img/GB.png');
-            background-size: cover;
-            width: 28px;
-            height: 35px;
-            cursor: pointer;
-            }
-            .marker4 {
-            background-image: url('assets/img/SPG.png');
-            background-size: cover;
-            width: 28px;
-            height: 35px;
-            cursor: pointer;
-            }
+  background-image: url('assets/img/EI.png');
+  background-size: cover;
+  width: 28px;
+  height: 35px;
+  cursor: pointer;
+  }
+  .marker2 {
+  background-image: url('assets/img/ES.png');
+  background-size: cover;
+  width: 28px;
+  height: 35px;
+  cursor: pointer;
+  } 
+  .marker3 {
+  background-image: url('assets/img/GB.png');
+  background-size: cover;
+  width: 28px;
+  height: 35px;
+  cursor: pointer;
+  }
+  .marker4 {
+  background-image: url('assets/img/SPG.png');
+  background-size: cover;
+  width: 28px;
+  height: 35px;
+  cursor: pointer;
+  }
       </style>
   </head>
   
@@ -158,6 +156,7 @@
                                 <input id="SPG" type="checkbox"  class="cb" onClick="toggleLayer('SPG')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/SPG.png'width='28' height='35' value="SPG">&nbsp; Solar Power Generatation
                                 </div>   
                                <div id='info' class='info'></div>
+                               <div id="carousel-example-generic" class="carousel" data-ride="carousel"></div>
                           </div>
                       </div>
                   </div>

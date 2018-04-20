@@ -22,13 +22,14 @@
  //           });
 
 // open/close legend
-   $(function () {
+/*   $(function () {
       $('.glyphicon').unbind('click');
       $('.glyphicon').click(function (e) {
       $(this).toggleClass('glyphicon glyphicon-plus glyphicon glyphicon-minus');
       $('.content-one').slideToggle('slow'); return false;
   });
     });
+*/    
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiY3J2YW5wb2xsYXJkIiwiYSI6ImNqMHdvdnd5MTAwMWEycXBocm4zbXVjZm8ifQ.3zjbFccILu6mL7cOTtp40A';
 

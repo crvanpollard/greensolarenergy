@@ -130,12 +130,10 @@
   height: 40px;
 }    
 #card {
-  background-color: #D3D3D3;
-  border-color: #D3D3D3;
+  background-color: #999999;
+  border-color: #999999;
   color: #ffffff;
   font-size: 20px;
- /*   padding-left: 15px;
-margin:10px 5px 5px 5px; */
   text-align: center;
   min-height: 35px;
   padding:3px 0px 0px 0px;
@@ -192,6 +190,9 @@ color:#101010;
     color: #2a6496;
     text-decoration: underline;
 }
+/* ICON MARKER info */
+ 
+/* ICON MARKER info */
 
 @media (max-width: 1024px){
                  .listings .item .title {

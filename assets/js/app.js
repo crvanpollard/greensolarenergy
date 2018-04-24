@@ -107,20 +107,27 @@
             el.addEventListener('click', function() {
             //  window.alert(marker.properties.name);
             //   console.log(marker.properties);
-             var content = '<h4 style="color:white;background-color:#eb2226;padding: 3px;">'+ marker.properties.name+'</h4>'
-            +'<B>Certificate:</B> '+ marker.properties.certificat  
-            +'<br><B>Developer:</B> '+ marker.properties.developer 
-            +'<br><B>Info:</B> '+ marker.properties.uniquefeat
+            if (marker.properties.bio_1 === undefined){ var BIO1 = ' '  ;}
+            else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio_1;}
+            if (marker.properties.bio_2 === undefined){ var BIO2 = ' '  ;}
+            else { var BIO2 = '&nbsp;'+ marker.properties.bio_2;}
+            if (marker.properties.bio_3 === undefined){ var BIO3 = ' '  ;}
+            else { var BIO3 = '&nbsp;'+ marker.properties.bio_3;}
+
+            var content = '<h4 style="color:white;background-color:#eb2226;padding: 3px;">'+ marker.properties.name+'</h4>'
+                        + BIO1
+                        + BIO2
+                        + BIO3
             ;
 
             if (marker.properties.photo1 === undefined){ var PHOTO1= " "  ;}
-                    else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>"
-                    +"<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>"
-                    +"<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>"
-                    +"<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div></div>"
-                    +" <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
-                    +" </a>"+" <a class='right carousel-control' href='#carousel-example-generic' data-slide='next'>"+
-                    "<span class='glyphicon glyphicon-chevron-right'></span>"+"</a>" ;}
+            else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>"
+            +"<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>"
+            +"<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>"
+            +"<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div></div>"
+            +" <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
+            +" </a>"+" <a class='right carousel-control' href='#carousel-example-generic' data-slide='next'>"+
+            "<span class='glyphicon glyphicon-chevron-right'></span>"+"</a>" ;}
             //      if (props.Photo_Cred===undefined){ var Photo_Cred = " "  ;}
             //      else { var Photo_Cred = "<div class='labelfieldsource'>"+ (props.Photo_Cred) +  "</div>";}
             var  content2 = PHOTO1
@@ -161,7 +168,7 @@
         es.addEventListener('click', function() {
         //  window.alert(marker.properties.name);
         //   console.log(marker.properties);
-         if (marker.properties.bio_1 === undefined){ var BIO1 = ' '  ;}
+        if (marker.properties.bio_1 === undefined){ var BIO1 = ' '  ;}
         else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio_1;}
         if (marker.properties.bio_2 === undefined){ var BIO2 = ' '  ;}
         else { var BIO2 = '&nbsp;'+ marker.properties.bio_2;}
@@ -174,7 +181,7 @@
         +'<B>Owner:</B> '+ marker.properties.owner
         +'<br><B>Power Rating:</B> '+ marker.properties.powerratin
         +'<br><B>Energy Rating:</B> '+ marker.properties.energyrati
-        +'<br><B>Application:</B> '+ marker.properties.applicatio
+        +'<br><B>Application Use:</B> '+ marker.properties.applicatio
         + BIO1
         + BIO2
         + BIO3
@@ -182,13 +189,8 @@
         ;
 
         if (marker.properties.photo1 === undefined){ var PHOTO1= " "  ;}
-                else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>"
-                +"<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>"
-                +"<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>"
-                +"<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div></div>"
-                +" <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
-                +" </a>"+" <a class='right carousel-control' href='#carousel-example-generic' data-slide='next'>"+
-                "<span class='glyphicon glyphicon-chevron-right'></span>"+"</a>" ;}
+        else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div></div>"
+   ;}
         //      if (props.Photo_Cred===undefined){ var Photo_Cred = " "  ;}
         //      else { var Photo_Cred = "<div class='labelfieldsource'>"+ (props.Photo_Cred) +  "</div>";}
         var  content2 = PHOTO1
@@ -231,19 +233,19 @@
         //  window.alert(marker.properties.name);
         //   console.log(marker.properties);
          var content = '<h4 style="color:white;background-color:#96c93d;padding: 3px;">'+ marker.properties.name+'</h4>'
-        +'<B>Certificate:</B> '+ marker.properties.certificat  
+        +'<B>Certification Level:</B> '+ marker.properties.certificat  
         +'<br><B>Developer:</B> '+ marker.properties.developer 
-        +'<br><B>Info:</B> '+ marker.properties.uniquefeat
+        +'<br><B>Unique Features:</B> '+ marker.properties.uniquefeat
         ;
 
         if (marker.properties.photo1 === undefined){ var PHOTO1= " "  ;}
-                else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>"
-                +"<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>"
-                +"<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>"
-                +"<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div></div>"
-                +" <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
-                +" </a>"+" <a class='right carousel-control' href='#carousel-example-generic' data-slide='next'>"+
-                "<span class='glyphicon glyphicon-chevron-right'></span>"+"</a>" ;}
+        else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>"
+        +"<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>"
+        +"<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>"
+        +"<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div></div>"
+        +" <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
+        +" </a>"+" <a class='right carousel-control' href='#carousel-example-generic' data-slide='next'>"+
+        "<span class='glyphicon glyphicon-chevron-right'></span>"+"</a>" ;}
         //      if (props.Photo_Cred===undefined){ var Photo_Cred = " "  ;}
         //      else { var Photo_Cred = "<div class='labelfieldsource'>"+ (props.Photo_Cred) +  "</div>";}
         var  content2 = PHOTO1
@@ -307,17 +309,18 @@
             ;
 
             if (marker.properties.photo1 === undefined){ var PHOTO1= " "  ;}
-                    else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>"
-                    +"<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>"
-                    +"<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>"
-                    +"<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div></div>"
-                    +" <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
-                    +" </a>"+" <a class='right carousel-control' href='#carousel-example-generic' data-slide='next'>"+
-                    "<span class='glyphicon glyphicon-chevron-right'></span>"+"</a>" ;}
-            //      if (props.Photo_Cred===undefined){ var Photo_Cred = " "  ;}
-            //      else { var Photo_Cred = "<div class='labelfieldsource'>"+ (props.Photo_Cred) +  "</div>";}
+            else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>"
+            +"<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>"
+            +"<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>"
+            +"<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div></div>"
+            +" <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
+            +" </a>"+" <a class='right carousel-control' href='#carousel-example-generic' data-slide='next'>"+
+            "<span class='glyphicon glyphicon-chevron-right'></span>"+"</a>" ;}
+          //  if (marker.properties.credit_1 === undefined){ var Photo_Cred = " "  ;}
+         //   else { var Photo_Cred = "<div class='labelfieldsource'>"+ (marker.properties.credit_1) +  "</div>";}
             var  content2 = PHOTO1
-                     //   + Photo_Cred
+                      //    + Photo_Cred;
+
             document.getElementById('info').innerHTML = content;
             document.getElementById('carousel-example-generic').innerHTML = content2;
             $('.carousel').carousel('pause');

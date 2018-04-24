@@ -27,8 +27,6 @@
       <script src="assets/data/ES.js"></script>
       <script src="assets/data/GB.js"></script>
       <script src="assets/data/SPG.js"></script>
-    <!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
-     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' /> -->
 
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
@@ -47,7 +45,7 @@
             cursor: pointer;
             font-size:12px;
             text-decoration:none;
-            background-image: url(https://raw.githubusercontent.com/crvanpollard/MRP2045_Mapbox/master/assets/img/region.png);
+            background-image: url(https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/region.png);
             background-size: 27px 27px;
              background-position: center; 
             background-repeat: no-repeat;
@@ -101,33 +99,33 @@
             border-radius: 3px;
             }
             .marker {
-  background-image: url('assets/img/EI.png');
-  background-size: cover;
-  width: 28px;
-  height: 35px;
-  cursor: pointer;
-  }
-  .marker2 {
-  background-image: url('assets/img/ES.png');
-  background-size: cover;
-  width: 28px;
-  height: 35px;
-  cursor: pointer;
-  } 
-  .marker3 {
-  background-image: url('assets/img/GB.png');
-  background-size: cover;
-  width: 28px;
-  height: 35px;
-  cursor: pointer;
-  }
-  .marker4 {
-  background-image: url('assets/img/SPG.png');
-  background-size: cover;
-  width: 28px;
-  height: 35px;
-  cursor: pointer;
-  }
+            background-image: url('assets/img/EI.png');
+            background-size: cover;
+            width: 28px;
+            height: 35px;
+            cursor: pointer;
+            }
+            .marker2 {
+            background-image: url('assets/img/ES.png');
+            background-size: cover;
+            width: 28px;
+            height: 35px;
+            cursor: pointer;
+            } 
+            .marker3 {
+            background-image: url('assets/img/GB.png');
+            background-size: cover;
+            width: 28px;
+            height: 35px;
+            cursor: pointer;
+            }
+            .marker4 {
+            background-image: url('assets/img/SPG.png');
+            background-size: cover;
+            width: 28px;
+            height: 35px;
+            cursor: pointer;
+            }
       </style>
   </head>
   
@@ -161,33 +159,16 @@
                       </div>
                   </div>
               </div>
-            </div>  
+      </div>  
 
       <div id="sidebar" class="col-sm-9">
         <div id="map" class="map"></div>
-      
-  <!--      <div id='main_legend' class='legend'>
-            <div class="expand-one"><i class="glyphicon glyphicon-minus"></i>&nbsp;&nbsp;Legend</div> 
-            <div id='mrp-legend'>
-            <div class="content-one">
-            <div id='mrp-categories'>  
-            <div><span2 style='background-color: #24527F'></span2>Roadway - Funded</div>
-            <div><span2 style='background-color: #90ABD9'></span2>Roadway - Unfunded</div>
-            <div><span2 style='background-color: #69883A'></span2>Transit - Funded</div>
-            <div><span2 style='background-color: #B4CA8B'></span2>Transit - Unfunded</div>
-            <div><span2 style='background-color: #795300'></span2>Externally Funded</div>
-          </div>
-            </div>
-          </div>
-       </div>   
-    -->   
-
         <a href='javascript:void(0);' id='zoomtoregion'></a>
       </div>
+
  </div>
 
   
-
 <script src="assets/js/app.js"></script>
 <script src="assets/js/numeral.js"></script>
 

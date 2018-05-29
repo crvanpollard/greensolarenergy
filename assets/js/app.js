@@ -53,7 +53,7 @@
     }
 
     // Add zoom and rotation controls to the map.
-    map.addControl(new mapboxgl.NavigationControl(),['top-left']);
+    map.addControl(new mapboxgl.NavigationControl(),['top-right']);
     map.addControl(new mapboxgl.AttributionControl(),'bottom-right');
 
     // Zoom to Extent

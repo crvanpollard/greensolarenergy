@@ -8,18 +8,11 @@
       overflow: auto;
       background-color: #666666;
     }
-    #sidebar {
-      -webkit-transition: all 0.25s ease-out;
-        -moz-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
-    }
     #sidebar{
       height: 100%;
     }
     #map {
-      height:97%;
-      overflow: hidden;
-      margin-top:0px;
+      height:100%;
     }
     .mapboxgl-ctrl-attrib.compact {
     margin: 10px 10px 10px 10px;

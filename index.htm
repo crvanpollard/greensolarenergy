@@ -132,9 +132,10 @@
             width: 550px;
             top: 10px;
             left: 10px;
-     /*       background-color: white;*/
+            background-color: white;
             border-radius: 4px;
-        }
+            }
+
       </style>
   </head>
   
@@ -145,23 +146,16 @@
         <div id="map" class="map"></div>
         <div id="legend-stack">
                <div id="overlay-layers" class="panel-collapse collapse in">
-                          <div class="panel-body" style="padding: 0px 15px;margin-left: 10px;" id="hype">
-                                <div class="checkbox">
-                                <input id="EI" type="checkbox"  class="cb" onClick="toggleLayer('EI')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/EI.png'width='28' height='35' value="EI">&nbsp;Energy Innovation
-                                </div>   
-                                <div class="checkbox">
-                                <input id="ES" type="checkbox"  class="cb" onClick="toggleLayer('ES')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/ES.png'width='28' height='35' value="ES">&nbsp;Energy Storage
-                                </div>   
-                                <div class="checkbox">
-                                <input id="GB" type="checkbox"  class="cb" onClick="toggleLayer('GB')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/GB.png'width='28' height='35' value="GB">&nbsp;Green Buildings
-                                </div>   
-                                <div class="checkbox">
-                                <input id="SPG" type="checkbox"  class="cb" onClick="toggleLayer('SPG')" checked><img src='https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/SPG.png'width='28' height='35' value="SPG">&nbsp; Solar Power Generatation
-                                </div>   
-                               <div id='info' class='info'></div>
-                               <div id="carousel-example-generic" class="carousel" data-ride="carousel"></div>
-                          </div>
-                      </div>
+                  <div class="panel-body" style="padding: 0px 15px;margin-left: 10px;" id="hype">
+                      <div><img src='assets/img/legend/EI_L.png' value="EI"></div>   
+                      <div><img src='assets/img/legend/ES_L.png' value="EI"></div> 
+                      <div><img src='assets/img/legend/GB_L.png' value="EI"></div> 
+                      <div><img src='assets/img/legend/SPG_L.png' value="EI"></div> 
+                   
+                     <div id='info' class='info'></div>
+                     <div id="carousel-example-generic" class="carousel" data-ride="carousel"></div>
+                  </div>
+                </div>
           </div>
         <a href='javascript:void(0);' id='zoomtoregion'></a>
       

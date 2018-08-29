@@ -22,6 +22,12 @@
  //                   e.target.checked ? 'visible' : 'none');
  //           });   
 
+ $('#EI').change(function(){
+ //   $(this).toggleClass('dark');
+//    var oldimg = $(this).next().attr('src');                    
+//    $(this).next().attr('src', oldimg.replace('gray', 'dark')); 
+});   
+
   mapboxgl.accessToken = 'pk.eyJ1IjoiY3J2YW5wb2xsYXJkIiwiYSI6ImNqMHdvdnd5MTAwMWEycXBocm4zbXVjZm8ifQ.3zjbFccILu6mL7cOTtp40A';
 
   // This adds the map
@@ -103,6 +109,22 @@
             var el = document.createElement('div');
             el.className = 'marker';
             el.style.backgroundImage = 'assets/img/EI.png';
+
+            var popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false
+            });
+
+            el.addEventListener('mouseenter',function(){
+            var coordinates = marker.geometry.coordinates.slice();
+            popup.setLngLat(coordinates)
+            .setHTML('<h4>'+ marker.properties.name+'</h4><p style="border-bottom: 8px solid #eb2226;"</p>')
+            .addTo(map);
+            })
+
+            el.addEventListener('mouseleave',function(){
+            popup.remove();
+            })
             
             el.addEventListener('click', function() {
             //  window.alert(marker.properties.name);
@@ -164,6 +186,22 @@
         var es = document.createElement('div');
         es.className = 'marker2';
         es.style.backgroundImage = 'assets/img/ES.png';
+
+        var popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false
+        });
+
+        es.addEventListener('mouseenter',function(){
+        var coordinates = marker.geometry.coordinates.slice();
+        popup.setLngLat(coordinates)
+        .setHTML('<h4>'+ marker.properties.name+'</h4><p style="border-bottom: 8px solid #19bbb8;"</p>')
+        .addTo(map);
+        })
+
+        es.addEventListener('mouseleave',function(){
+        popup.remove();
+        })
        
         es.addEventListener('click', function() {
         //  window.alert(marker.properties.name);
@@ -228,6 +266,23 @@
         var gb = document.createElement('div');
         gb.className = 'marker3';
         gb.style.backgroundImage = 'assets/img/GB.png';
+
+
+        var popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false
+        });
+
+        gb.addEventListener('mouseenter',function(){
+        var coordinates = marker.geometry.coordinates.slice();
+        popup.setLngLat(coordinates)
+        .setHTML('<h4>'+ marker.properties.name+'</h4><p style="border-bottom: 8px solid #96c93d;"</p>')
+        .addTo(map);
+        })
+
+        gb.addEventListener('mouseleave',function(){
+        popup.remove();
+        })
         
         gb.addEventListener('click', function() {
         //  window.alert(marker.properties.name);
@@ -282,6 +337,29 @@
             var spg = document.createElement('div');
             spg.className = 'marker4';
             spg.style.backgroundImage = 'assets/img/SPG.png';
+
+             // Create a popup, but don't add it to the map yet.
+            var popup = new mapboxgl.Popup({
+                closeButton: false,
+                closeOnClick: false
+            });
+
+            spg.addEventListener('mouseenter',function(){
+            var coordinates = marker.geometry.coordinates.slice();
+          //  var description = marker.properties.name;
+
+            // Populate the popup and set its coordinates
+            // based on the feature found.
+            popup.setLngLat(coordinates)
+            .setHTML('<h4>'+ marker.properties.name+'</h4><p style="border-bottom: 8px solid #fdbf12;"</p>')
+            //  `<h2>${mpms}</h2><p style="border-bottom: 8px solid #${colors[category].forMap};">${name}</p>`
+            .addTo(map);
+            })
+
+            spg.addEventListener('mouseleave',function(){
+            //  window.alert(marker.properties.name);
+            popup.remove();
+            })
 
             spg.addEventListener('click', function() {
             //  window.alert(marker.properties.name);
@@ -338,6 +416,10 @@
         });    
 
     });
+
+  
+
+
 
 // older code that might have some sample code snippets
 /* map.on('load', function () {
@@ -408,27 +490,6 @@
  //       map.getCanvas().style.cursor = '';
  //   });
 
-    // Create a popup, but don't add it to the map yet.
-  //  var popup = new mapboxgl.Popup({
-  //      closeButton: false,
-  //      closeOnClick: false
-  //  });
-
- //   map.on('mouseenter', 'SPG', function(e) {
-        // Change the cursor style as a UI indicator.
- //       map.getCanvas().style.cursor = 'pointer';
-        // Populate the popup and set its coordinates
-        // based on the feature found.
-   //     popup.setLngLat(e.features[0].geometry.coordinates)
-   //         .setHTML(e.features[0].properties.name)
-   //         .addTo(map);
-   // });
-
-  //  map.on('mouseleave', 'SPG', function() {
-  //      map.getCanvas().style.cursor = '';
-  //      popup.remove();
-  //  });
-
-  //  });
+  
 
 

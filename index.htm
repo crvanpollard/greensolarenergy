@@ -126,16 +126,10 @@
             height: 35px;
             cursor: pointer;
             }
-            #legend-stack {
-            position: fixed;
-            z-index: 100;
-            width: 550px;
-            top: 10px;
-            left: 10px;
-            background-color: white;
-            border-radius: 4px;
+                 .legend-check {
+                display: none;
             }
-
+           
       </style>
   </head>
   
@@ -145,21 +139,24 @@
     
         <div id="map" class="map"></div>
         <div id="legend-stack">
-               <div id="overlay-layers" class="panel-collapse collapse in">
-                  <div class="panel-body" style="padding: 0px 15px;margin-left: 10px;" id="hype">
-                      <div><img src='assets/img/legend/EI_L.png' value="EI"></div>   
-                      <div><img src='assets/img/legend/ES_L.png' value="EI"></div> 
-                      <div><img src='assets/img/legend/GB_L.png' value="EI"></div> 
-                      <div><img src='assets/img/legend/SPG_L.png' value="EI"></div> 
-                   
-                     <div id='info' class='info'></div>
-                     <div id="carousel-example-generic" class="carousel" data-ride="carousel"></div>
-                  </div>
-                </div>
-          </div>
+            <div class="legend-icons" value="EI"  id="EI">
+              <label>
+              <input type="checkbox" checked id="EI" class="legend-check" name="layerTCDI">
+              <img src="assets/img/legend/EI_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
+              </label>
+            </div>   
+            <div class="legend-icons" value="ES"  id='ES'><img src='assets/img/legend/ES_L.png'></div> 
+            <div class="legend-icons" value="EB"  id='EB'><img src='assets/img/legend/GB_L.png'></div> 
+            <div class="legend-icons" value="SPG" id='SPG'><img src='assets/img/legend/SPG_L.png'></div> 
+        </div>
+          <div id="info-stack">
+            <div id='info' class='info'></div>
+            <div id="carousel-example-generic" class="carousel" data-ride="carousel"></div>
+        </div>
+        
+      </div>
+    </div>
         <a href='javascript:void(0);' id='zoomtoregion'></a>
-      
-
  </div>
 
   

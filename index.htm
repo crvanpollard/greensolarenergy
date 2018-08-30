@@ -32,102 +32,8 @@
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
     
       <style>
-        #zoomtoregion{
-            position: absolute;
-            top:110px;
-            right:12px;
-            z-index:100;
-            background-color:white;
-            color:black;
-            padding:6px;
-            border-radius:4px;
-            font-family: 'Helvetica Neue';
-            cursor: pointer;
-            font-size:12px;
-            text-decoration:none;
-            background-image: url(https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/region.png);
-            background-size: 27px 27px;
-             background-position: center; 
-            background-repeat: no-repeat;
-            height: 27px;
-            width: 27px;
-          }
-          #zoomtoregion:hover{
-            background-color: #ddd;
-          }
-          .legend {
-            background-color: #fff;
-            border-radius: 3px;
-            bottom: 45px;
-            right: 20px;
-            width: 180px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.10);
-            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            padding: 10px;
-            position: absolute;
-            z-index: 1;
-            opacity: .95;
-            }
-            .legend h4 {
-            margin: 0 0 10px;
-            }
-            .legend div span {
-            border-radius: 50%;
-            display: inline-block;
-            height: 10px;
-            margin-right: 5px;
-            width: 10px;
-            }
-            .legend div span2 {
-            display: inline-block;
-            height: 5px;
-            margin-right: 5px;
-            width: 40px;
-            }
-            .map-overlay {
-            position: absolute;
-            width: 250px;
-            height: 40px;
-            top: 0;    
-            margin-top: 20px;
-            bottom: 0;
-            right: 0;
-            margin-right: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            font-family: Arial, sans-serif;
-            overflow: auto;
-            border-radius: 3px;
-            }
-            .marker {
-            background-image: url('assets/img/EI.png');
-            background-size: cover;
-            width: 28px;
-            height: 35px;
-            cursor: pointer;
-            }
-            .marker2 {
-            background-image: url('assets/img/ES.png');
-            background-size: cover;
-            width: 28px;
-            height: 35px;
-            cursor: pointer;
-            } 
-            .marker3 {
-            background-image: url('assets/img/GB.png');
-            background-size: cover;
-            width: 28px;
-            height: 35px;
-            cursor: pointer;
-            }
-            .marker4 {
-            background-image: url('assets/img/SPG.png');
-            background-size: cover;
-            width: 28px;
-            height: 35px;
-            cursor: pointer;
-            }
-                 .legend-check {
-                display: none;
+            .legend-check {
+            display: none;
             }
            
       </style>
@@ -144,12 +50,27 @@
               <input type="checkbox" checked id="EI" class="legend-check" name="layerTCDI">
               <img src="assets/img/legend/EI_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
               </label>
-            </div>   
-            <div class="legend-icons" value="ES"  id='ES'><img src='assets/img/legend/ES_L.png'></div> 
-            <div class="legend-icons" value="EB"  id='EB'><img src='assets/img/legend/GB_L.png'></div> 
-            <div class="legend-icons" value="SPG" id='SPG'><img src='assets/img/legend/SPG_L.png'></div> 
+            </div>  
+            <div class="legend-icons" value="ES"  id="ES">
+              <label>
+              <input type="checkbox" checked id="ES" class="legend-check" name="layerTCDI">
+              <img src="assets/img/legend/ES_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
+              </label>
+            </div> 
+            <div class="legend-icons" value="GB"  id="GB">
+              <label>
+              <input type="checkbox" checked id="GB" class="legend-check" name="layerTCDI">
+              <img src="assets/img/legend/GB_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
+              </label>
+            </div> 
+            <div class="legend-icons" value="SPG"  id="SPG">
+              <label>
+              <input type="checkbox" checked id="SPG" class="legend-check" name="layerTCDI">
+              <img src="assets/img/legend/SPG_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
+              </label>
+            </div>  
         </div>
-          <div id="info-stack">
+        <div id="info-stack">
             <div id='info' class='info'></div>
             <div id="carousel-example-generic" class="carousel" data-ride="carousel"></div>
         </div>

@@ -8,19 +8,11 @@
       overflow: auto;
       background-color: #666666;
     }
-    #sidebar{
-      height: 100%;
-    }
     #map {
       height:100%;
     }
     .mapboxgl-ctrl-attrib.compact {
     margin: 10px 10px 10px 10px;
-    }
-    #sidebar2 {
-      height:97%;
-      overflow: auto;
-      margin-top:0px;
     }
     #accordion {
       overflow-y: auto;
@@ -61,6 +53,58 @@
     height:0;
     clear:both;
     visibility:hidden;
+    }
+    #zoomtoregion{
+    position: absolute;
+    top:110px;
+    right:12px;
+    z-index:100;
+    background-color:white;
+    color:black;
+    padding:6px;
+    border-radius:4px;
+    font-family: 'Helvetica Neue';
+    cursor: pointer;
+    font-size:12px;
+    text-decoration:none;
+    background-image: url(https://raw.githubusercontent.com/crvanpollard/greensolarenergy/master/assets/img/region.png);
+    background-size: 27px 27px;
+     background-position: center; 
+    background-repeat: no-repeat;
+    height: 27px;
+    width: 27px;
+    }
+    #zoomtoregion:hover{
+    background-color: #ddd;
+    }
+    /* Marker styles */
+    .marker {
+    background-image: url('img/EI.png');
+    background-size: cover;
+    width: 28px;
+    height: 35px;
+    cursor: pointer;
+    }
+    .marker2 {
+    background-image: url('img/ES.png');
+    background-size: cover;
+    width: 28px;
+    height: 35px;
+    cursor: pointer;
+    } 
+    .marker3 {
+    background-image: url('img/GB.png');
+    background-size: cover;
+    width: 28px;
+    height: 35px;
+    cursor: pointer;
+    }
+    .marker4 {
+    background-image: url('img/SPG.png');
+    background-size: cover;
+    width: 28px;
+    height: 35px;
+    cursor: pointer;
     }
     /* popup style */
     .mapboxgl-popup {
@@ -128,6 +172,7 @@
       margin: 0 auto;
       max-height: 100%;
     }
+    /* Layer Information */
     #info-stack {
         position: fixed;
         z-index: 100;

@@ -2,7 +2,6 @@
     var SPG;
     var ES;
     var GB;
-    var SPGicon;
     var geojson;
 
 // Does not work at the moment 4/20/18

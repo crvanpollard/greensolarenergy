@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
     
-      <title>DVRPC - Solar and Energy Beta Map</title>
+      <title>Energy Use and Greenhouse Gas Emissions Reduction Projects in Greater Philadelphia</title>
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -41,6 +41,31 @@
   
   <body>
 <!-- Start Main Body -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                <div class="navbar-brand">
+                    <a id="header-link" href="http://www.dvrpc.org" target="_blank">
+                    <img id="dvrpc-logo" src="assets/img/dvrpc_logo_small.png" alt="DVRPC logo"/>
+                    <p id="header-link-text">Energy Use and Greenhouse Gas Emissions Reduction Projects</p>
+                    </a>
+                </div>
+
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                    <button type="button" style=" margin:10px 10px 0px 4px;float:right;color:#2e5c95;background-color:#d9dadc;" class="btn btn-sm"<a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;"><i class="fa fa-info-circle" style="color:#2e5c95"></i>&nbsp;&nbsp;<b>About</b></a></button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <div id="container">
     
         <div id="map" class="map"></div>
@@ -69,6 +94,10 @@
               <img src="assets/img/legend/SPG_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
               </label>
             </div>  
+     
+
+  <i class="fa fa-info-circle" style="color:#2e5c95" data-toggle="modal" data-target="#aboutModal"></i>
+
         </div>
         <div id="info-stack">
             <div id='info' class='info'></div>
@@ -79,6 +108,60 @@
     </div>
         <a href='javascript:void(0);' id='zoomtoregion'></a>
  </div>
+            <!-- About Modal -->
+        <div class="modal fade" id="aboutModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h5 class="modal-title">Energy Use and Greenhouse Gas Emissions Reduction Projects in Greater Philadelphia</h5>
+                        </div>
+                        <div class="modal-body">
+                             <ul id="aboutTabs" class="nav nav-tabs">
+                                <li class="active"><a href="#about" data-toggle="tab"><i class="icon-info-sign"></i>&nbsp;About</a></li> 
+                                <li><a href="#contact" data-toggle="tab"><i class="icon-exclamation-sign"></i>&nbsp;Contact</a></li>
+                                <li><a href="#disclaimer" data-toggle="tab"><i class="icon-exclamation-sign"></i>&nbsp;Disclaimer</a></li>
+                            </ul>
+                            <div id="aboutTabsContent" class="tab-content" style="padding-top: 10px;">
+                                <div class="tab-pane fade active in" id="about">
+                                     <div>This map showcases projects in the DVRPC region that reduce energy use and greenhouse gas emissions. Clicking on a project opens a box with detailed information about the project and some of the ways they are reducing energy use and greenhouse gas emissions.<br><br>  
+                                      
+                                      DVRPC is actively seeking additions to this map! Please contact Adam Beam at <a href="mailto:abeam@dvrpc.org">abeam@dvrpc.org</a>if you are aware of  a project to be considered for inclusion. In addition, please contact Adam if you are the owner or operator of a project on this map and would like to correct or update information, or if you would like the project removed.<br>
+                                      
+                                      There are four categories of projects:<br><br>
+
+                                      <img src="assets/css/img/SPG.png" class="about-icon"/><B>Solar Power Generation</B> - These are projects with  installations of large arrays of solar photovoltaic panels. These installations generate clean energy, both for use at the facilities where they are installed, and for contributing to the region’s electrical grid. This helps lower carbon dioxide and other emissions for the region by replacing the use of fossil fuels like coal and natural gas in electricity generation.<br><br>
+
+                                      <B>Energy Storage</B> - These projects use batteries or other technologies to store electricity. These projects can be tied to renewable energy systems or can harvest waste energy. These storage projects increase resiliency by allowing access to electricity during power outages. Storage can also provide new revenue streams for project owners by allowing them to participate in PJM’s frequency regulation market.<br><br> 
+
+                                      <B>Green Buildings</B> - The projects in this category are all certified LEED Gold or LEED Platinum buildings. Many organizations have incorporated green building practices into their properties in order to curb energy costs by reducing energy usage and their consequent greenhouse gas emissions. These practices include green roofs, geothermal HVAC systems, insulation, and other retrofits to ensure the building uses as little energy as possible. These greening measure provide many additional benefits to the building owners, operators, and occupants.<br><br> 
+
+                                      <B>Energy Innovation</B> - Energy innovation projects across the region have found new ways ways to improve current processes or use new technologies that boost efficiency and reduce energy use. Some of these projects involve using waste streams to increase available energy. Others include new technologies that reduce energy consumption and greenhouse gas emissions.<br><br>
+ 
+                                    </div>                                 
+                                </div>
+                                <div class="tab-pane fade" id="contact"> 
+                                     <p>
+                                        <h4>For more information, contact:</h4>
+                                            <address>
+                                            Adam Beam, Research Analyst, Office of Energy and Climate Change Initiatives<br/>
+                                            <a href="mailto:abeam@dvrpc.org">abeam@dvrpc.org</a><br/>
+                                            (215) 238-2830
+                                            </address>
+                                        </p>  
+                                </div>
+                                <div class="tab-pane fade" id="disclaimer"> 
+                                        <p>This web page is a public resource of general information. The Delaware Valley Regional Planning Commission (DVRPC) makes no warranty, 
+                                        representation, or guarantee as to the content, sequence, accuracy, timeliness, or completeness of any of the spatial data or database 
+                                        information provided herein. DVRPC and partner state, local, and other agencies shall assume no liability for errors, omissions, or 
+                                        inaccuracies in the information provided regardless of how caused; or any decision made or action taken or not taken by any person relying 
+                                        on any information or data furnished within.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
 
   
 <script src="assets/js/app.js"></script>

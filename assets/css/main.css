@@ -1,28 +1,51 @@
-    html, body{
-      height: 100%;
-      width: 100%;
+    html, body {
+    height: 100%;
+    margin: 0;
     }
-    #container{
-      height: 100%;
-      width: 100%;
-      overflow: auto;
-      background-color: #666666;
+    body { padding-top: 50px; }
+    .navbar-default .navbar-brand {
+    color: #0078ae;
     }
     #map {
-      height:100%;
+    height: 100%;
+    }
+    #container{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding-top: 9px;
+    }
+    .navbar-brand {
+    padding: 8px 15px;
+    line-height: 20px;
+    }
+    #header-link{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    }
+    #dvrpc-logo{
+        margin: 5px 0px 0px 0px;
+    }
+    #header-link-text{
+    font-size: 20px;
+    margin: 4px 0px 0px 10px;
+    }
+    .container-fluid{
+    z-index: 30;
+    background: #0074ad;
+    height: 60px;
+    border-bottom: 3px solid #f7f7f7;
     }
     .mapboxgl-ctrl-attrib.compact {
     margin: 10px 10px 10px 10px;
     }
-    #accordion {
-      overflow-y: auto;
-      margin-top: 5px;
-    }
     .modal-footer {
     padding: 5px;
     }
-    #about{
-      color:white;
+    .modal-dialog{
+    width:900px;
     }
     h1 {
     font-size:22px;
@@ -159,7 +182,7 @@
         z-index: 100;
         width: 450px;
         height: 100px;
-        top: 10px;
+        top: 60px;
         left: 10px;
         background-color: white;
         border-radius: 4px;
@@ -171,6 +194,10 @@
       display: block;
       margin: 0 auto;
       max-height: 100%;
+    }
+    .about-icon {
+    width: 35px;
+    height: 42px;
     }
     /* Layer Information */
     #info-stack {

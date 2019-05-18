@@ -27,6 +27,7 @@
 //    $(this).next().attr('src', oldimg.replace('gray', 'dark')); 
 });   
 
+            $('#aboutModal').modal('show');
   mapboxgl.accessToken = 'pk.eyJ1IjoiY3J2YW5wb2xsYXJkIiwiYSI6ImNqMHdvdnd5MTAwMWEycXBocm4zbXVjZm8ifQ.3zjbFccILu6mL7cOTtp40A';
 
   // This adds the map
@@ -72,13 +73,13 @@
         });
     });
 
-    map.on('load', function () {
+     map.on('load', function () {
         map.addLayer({
-            "id": "county-outline",
+            "id": "county",
             "type": "line",
             "source": {
                 type: 'vector',
-                url: 'https://dvrpc-freight.michaelruane.com/dvrpc_boundaries.json'
+                url: 'https://tiles.dvrpc.org/data/dvrpc-municipal.json'
             },
             "source-layer": "county",
             "layout": {},
@@ -88,7 +89,7 @@
             },
             "filter": [
                     "==",
-                    "DVRPC_REG",
+                    "dvrpc",
                     "Yes"
             ]
         });

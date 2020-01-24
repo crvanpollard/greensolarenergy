@@ -4,30 +4,7 @@
     var GB;
     var geojson;
 
-// Does not work at the moment 4/20/18
-    function toggleLayer(id)
-        {
-            if ($('#'+id).is(':checked')) {
-            map.setLayoutProperty(id, 'visibility', 'visible');
-            }
-            else
-            {
-            map.setLayoutProperty(id, 'visibility', 'none');
-            }
-        }
- // Smaple code for when the checkbox changes, update the visibility of the layer.
- //           input.addEventListener('change', function(e) {
- //               map.setLayoutProperty(layerID, 'visibility',
- //                   e.target.checked ? 'visible' : 'none');
- //           });   
-
- $('#EI').change(function(){
- //   $(this).toggleClass('dark');
-//    var oldimg = $(this).next().attr('src');                    
-//    $(this).next().attr('src', oldimg.replace('gray', 'dark')); 
-});   
-
-            $('#aboutModal').modal('show');
+  $('#aboutModal').modal('show');
   mapboxgl.accessToken = 'pk.eyJ1IjoiY3J2YW5wb2xsYXJkIiwiYSI6ImNqMHdvdnd5MTAwMWEycXBocm4zbXVjZm8ifQ.3zjbFccILu6mL7cOTtp40A';
 
   // This adds the map
@@ -35,8 +12,8 @@
         container: 'map', 
         style: 'mapbox://styles/mapbox/light-v9', 
         center: [ -75.170669,39.950143], 
-        bearing: 20, // Rotate Philly ~9° off of north, thanks Billy Penn.
-        pitch: 50,
+        bearing: 0, // Rotate Philly ~9° off of north, thanks Billy Penn.
+        pitch: 35,
         zoom: 9,
         attributionControl: false
     });
@@ -51,7 +28,7 @@
             center: [-75.170669,39.950143], 
             zoom: 9,
             speed: 0.1,
-            bearing: -5,
+            bearing: 0,
             pitch: 35
           });
         }
@@ -68,7 +45,7 @@
             center: [ -75.170669,39.950143], 
                 zoom: 9,
                 speed: 0.5,
-                bearing: -5,
+                bearing: 0,
                 pitch: 35
         });
     });
@@ -125,7 +102,20 @@
             el.addEventListener('mouseleave',function(){
             popup.remove();
             })
-            
+
+            el.addEventListener('click', function(e){
+  // get all the elements with class "marker2"
+  var x = document.getElementsByClassName("marker2");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].className = "marker"; // set "marker" as the class for each of those elements
+  }
+  // at this point all markers are back to the original state
+
+  // now you set the class of the current clicked marker
+  this.className = 'marker2'; //don't use the variable "el", it's out of the scope and can change, "this" is the current clicked element
+  })
+
             el.addEventListener('click', function() {
             //  window.alert(marker.properties.name);
             //   console.log(marker.properties);
@@ -161,7 +151,7 @@
             map.flyTo({
             center: marker.geometry.coordinates,
             pitch: 50,
-            zoom: 12
+            zoom: 14
                 });
             });
 
@@ -219,7 +209,7 @@
         +'<B>Owner:</B> '+ marker.properties.owner
         +'<br><B>Power Rating:</B> '+ marker.properties.powerratin
         +'<br><B>Energy Rating:</B> '+ marker.properties.energyrati
-        +'<br><B>Application Use:</B> '+ marker.properties.applicatio
+        +'<br><B>Application Use:</B> '+ marker.properties.appuse
         + BIO1
         + BIO2
         + BIO3
@@ -240,7 +230,7 @@
         map.flyTo({
         center: marker.geometry.coordinates,
         pitch: 50,
-        zoom: 12
+        zoom: 14
             });
         });
 
@@ -312,7 +302,7 @@
         map.flyTo({
         center: marker.geometry.coordinates,
         pitch: 50,
-        zoom: 12
+        zoom: 14
             });
         });
 
@@ -377,9 +367,9 @@
 
              var content = '<h4 style="color:white;background-color:#fdbf12;padding: 3px;">'+ marker.properties.name+'</h4>'
             +'<B>Owner:</B> '+ marker.properties.owner 
-            +'<br><B>Name Plate Capacity:</B> '+ marker.properties.nameplatec 
-            +'<br><B># of Solar Panels:</B> '+ numeral(marker.properties.numberofso).format('0,0')
-            +'<br><B>Carbon Saved:</B> '+ marker.properties.carbonsave
+            +'<br><B>Name Plate Capacity:</B> '+ marker.properties.plate 
+            +'<br><B># of Solar Panels:</B> '+ numeral(marker.properties.solarpan).format('0,0')
+            +'<br><B>GHG Emissions Avoided:</B> '+ marker.properties.GGasE_Avoi
             + BIO1
             + BIO2
             + BIO3
@@ -406,7 +396,7 @@
             map.flyTo({
             center: marker.geometry.coordinates,
             pitch: 50,
-            zoom: 12
+            zoom: 14
                 });
             });
 

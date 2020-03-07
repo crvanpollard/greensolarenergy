@@ -4,7 +4,8 @@
     var GB;
     var geojson;
 
-  $('#aboutModal').modal('show');
+ // $('#aboutModal').modal('show');
+
   mapboxgl.accessToken = 'pk.eyJ1IjoiY3J2YW5wb2xsYXJkIiwiYSI6ImNqMHdvdnd5MTAwMWEycXBocm4zbXVjZm8ifQ.3zjbFccILu6mL7cOTtp40A';
 
   // This adds the map
@@ -84,7 +85,7 @@
 
         EI.features.forEach(function(marker) {
             var el = document.createElement('div');
-            el.className = 'marker';
+            el.className = 'marker1';
             el.style.backgroundImage = 'assets/img/EI.png';
 
             var popup = new mapboxgl.Popup({
@@ -102,19 +103,6 @@
             el.addEventListener('mouseleave',function(){
             popup.remove();
             })
-
-            el.addEventListener('click', function(e){
-  // get all the elements with class "marker2"
-  var x = document.getElementsByClassName("marker2");
-  var i;
-  for (i = 0; i < x.length; i++) {
-    x[i].className = "marker"; // set "marker" as the class for each of those elements
-  }
-  // at this point all markers are back to the original state
-
-  // now you set the class of the current clicked marker
-  this.className = 'marker2'; //don't use the variable "el", it's out of the scope and can change, "this" is the current clicked element
-  })
 
             el.addEventListener('click', function() {
             //  window.alert(marker.properties.name);
@@ -408,8 +396,6 @@
     });
 
   
-
-
 
 // older code that might have some sample code snippets
 /* map.on('load', function () {

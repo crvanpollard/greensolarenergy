@@ -51,7 +51,8 @@
         });
     });
 
-     map.on('load', function () {
+map.on('load', function () {
+
         map.addLayer({
             "id": "county",
             "type": "line",
@@ -71,10 +72,8 @@
                     "Yes"
             ]
         });
-    });
 
-    map.on('load', function () {
-        map.addLayer({
+         map.addLayer({
             "id": "EI",
             "type": "symbol",
             "source": {
@@ -107,17 +106,25 @@
             el.addEventListener('click', function() {
             //  window.alert(marker.properties.name);
             //   console.log(marker.properties);
-            if (marker.properties.bio_1 === undefined){ var BIO1 = ' '  ;}
-            else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio_1;}
-            if (marker.properties.bio_2 === undefined){ var BIO2 = ' '  ;}
-            else { var BIO2 = '&nbsp;'+ marker.properties.bio_2;}
-            if (marker.properties.bio_3 === undefined){ var BIO3 = ' '  ;}
-            else { var BIO3 = '&nbsp;'+ marker.properties.bio_3;}
+            if (marker.properties.bio1 === undefined){ var BIO1 = ' '  ;}
+            else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio1;}
+            if (marker.properties.bio2 === undefined){ var BIO2 = ' '  ;}
+            else { var BIO2 = '&nbsp;'+ marker.properties.bio2;}
+            if (marker.properties.bio3 === undefined){ var BIO3 = ' '  ;}
+            else { var BIO3 = '&nbsp;'+ marker.properties.bio3;}
+            if (marker.properties.bio4 === undefined){ var BIO4 = ' '  ;}
+            else { var BIO4 = '&nbsp;'+ marker.properties.bio4;}
 
             var content = '<h4 style="color:white;background-color:#eb2226;padding: 3px;">'+ marker.properties.name+'</h4>'
-                        + BIO1
-                        + BIO2
-                        + BIO3
+                +'<B><U>Contact Info</U></B>'
+                +'<br><B>Name:</B> '+ marker.properties.cname
+               // +'<br><B>Title:</B> '+ marker.properties.ctitle
+                +'<br><B>Phone:</B> '+ marker.properties.cphone
+               // +'<br><B>Email:</B> '+ marker.properties.cemail
+                + BIO1
+                + BIO2
+                + BIO3
+                + BIO4
             ;
 
             if (marker.properties.photo1 === undefined){ var PHOTO1= " "  ;}
@@ -147,10 +154,7 @@
                 .setLngLat(marker.geometry.coordinates)
                 .addTo(map);
         });
-    });
-
-    map.on('load', function () {
-        
+ 
         map.addLayer({
             "id": "ES",
             "type": "symbol",
@@ -206,7 +210,7 @@
 
         if (marker.properties.photo1 === undefined){ var PHOTO1= " "  ;}
         else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div></div>"
-   ;}
+        ;}
         //      if (props.Photo_Cred===undefined){ var Photo_Cred = " "  ;}
         //      else { var Photo_Cred = "<div class='labelfieldsource'>"+ (props.Photo_Cred) +  "</div>";}
         var  content2 = PHOTO1
@@ -226,9 +230,6 @@
             .setLngLat(marker.geometry.coordinates)
             .addTo(map);
         });
-    });
-
-    map.on('load', function () {
 
         map.addLayer({
             "id": "GB",
@@ -298,9 +299,6 @@
             .setLngLat(marker.geometry.coordinates)
             .addTo(map);
         });
-    });
-
-    map.on('load', function () {
 
         map.addLayer({
         "id": "SPG",
@@ -335,13 +333,10 @@
             })
 
             spg.addEventListener('mouseleave',function(){
-            //  window.alert(marker.properties.name);
             popup.remove();
             })
 
             spg.addEventListener('click', function() {
-            //  window.alert(marker.properties.name);
-            //   console.log(marker.properties);
 
             if (marker.properties.bio_1 === undefined){ var BIO1 = ' '  ;}
             else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio_1;}
@@ -375,7 +370,7 @@
           //  if (marker.properties.credit_1 === undefined){ var Photo_Cred = " "  ;}
          //   else { var Photo_Cred = "<div class='labelfieldsource'>"+ (marker.properties.credit_1) +  "</div>";}
             var  content2 = PHOTO1
-                      //    + Photo_Cred;
+            //    + Photo_Cred;
 
             document.getElementById('info').innerHTML = content;
             document.getElementById('carousel-example-generic').innerHTML = content2;
@@ -394,78 +389,6 @@
         });    
 
     });
-
-  
-
-// older code that might have some sample code snippets
-/* map.on('load', function () {
-
-    map.addLayer({
-        'id': 'SPG',
-        'type': 'circle',
-        'source': {
-            'type': 'geojson',
-            'data': SPG
-        },
-        'paint': {
-            'circle-radius': 4,
-            'circle-stroke-color' : '#ffffff',
-            'circle-stroke-width': 1,
-            'circle-color': 'rgba(105,136,58,.8)'
-            }
-        });
-*/
-    // When the user moves their mouse over the states-fill layer, we'll update the filter in
-    // the state-fills-hover layer to only show the matching state, thus making a hover effect.
-//    map.on('mousemove', 'SPG', function (e) {
-//        map.setFilter('SPG-hover', ['==', 'name', e.features[0].properties.name]);
-//    });
-
-    // Reset the state-fills-hover layer's filter when the mouse leaves the layer.
-//    map.on('mouseleave', 'TSP', function (e) {
-//        map.setFilter('TSP-hover', ['==', 'name', '']);
-//    });
- // When a click event occurs on a feature in the places layer, open a popup at the
-    // location of the feature, with description HTML from its properties.
-  /*  map.on('click', 'SPG', function (e) {
-    var features = map.queryRenderedFeatures(e.point, {
-        layers: ['SPG']
-      });
-
-      if (!features.length) {
-        return;
-      }
-
-      var feature = features[0];
-        var content = '<h4 style="color:white;background-color:rgb(105,136,58);padding: 3px;">'+ feature.properties.name+'</h4>'
-        +'<B>Project Scope:</B> '+ feature.properties.PROJSCOPE  
-        +'<br><B>Location:</B> '+ feature.properties.LOC
-        +'<br><B>State:</B> '+ feature.properties.State
-        +'<br><B>Timing:</B> '+ feature.properties.Timing
-        +'<br><table class="infotable"><thead><tr><th>Total Funded Cost<br><i>(millions in Y-O-E $)</i></th><th>Unfunded Cost<br><i>(millions in 2013 $)</i></th></tr></thead>'
-        +'<tbody><tr><td>'+ numeral(feature.properties.FundCost).format('($0,0.0)') +'</td><td> '+ numeral(feature.properties.UnfundCost).format('($0,0.0)') +'</td></tr></tbody>'
-        +'</table><br>'
-        ;
-      info.innerHTML = content;
-
-      map.flyTo({
-        center: feature.geometry.coordinates,
-        pitch: 50,
-        zoom: 14
-      }); 
-
-    });
-*/
-    // Change the cursor to a pointer when the mouse is over the places layer.
- //   map.on('mouseenter', 'SPG', function () {
- //       map.getCanvas().style.cursor = 'pointer';
- //   });
-
-    // Change it back to a pointer when it leaves.
- //   map.on('mouseleave', 'SPG', function () {
- //       map.getCanvas().style.cursor = '';
- //   });
-
   
 
 

@@ -188,18 +188,21 @@ map.on('load', function () {
         es.addEventListener('click', function() {
         //  window.alert(marker.properties.name);
         //   console.log(marker.properties);
-        if (marker.properties.bio_1 === undefined){ var BIO1 = ' '  ;}
-        else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio_1;}
-        if (marker.properties.bio_2 === undefined){ var BIO2 = ' '  ;}
-        else { var BIO2 = '&nbsp;'+ marker.properties.bio_2;}
-        if (marker.properties.bio_3 === undefined){ var BIO3 = ' '  ;}
-        else { var BIO3 = '&nbsp;'+ marker.properties.bio_3;}
-        if (marker.properties.bio_4 === undefined){ var BIO4 = ' '  ;}
-        else { var BIO4 = '&nbsp;'+ marker.properties.bio_4;}
+        if (marker.properties.bio1 === undefined){ var BIO1 = ' '  ;}
+        else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio1;}
+        if (marker.properties.bio2 === undefined){ var BIO2 = ' '  ;}
+        else { var BIO2 = '&nbsp;'+ marker.properties.bio2;}
+        if (marker.properties.bio3 === undefined){ var BIO3 = ' '  ;}
+        else { var BIO3 = '&nbsp;'+ marker.properties.bio3;}
+        if (marker.properties.bio4 === undefined){ var BIO4 = ' '  ;}
+        else { var BIO4 = '&nbsp;'+ marker.properties.bio4;}
 
         var content = '<h4 style="color:white;background-color:#19bbb8;padding: 3px;">'+ marker.properties.name+'</h4>'
-        +'<B>Owner:</B> '+ marker.properties.owner
-        +'<br><B>Power Rating:</B> '+ marker.properties.powerratin
+        +'<B><U>Contact Info</U></B>'
+        +'<br><B>Name:</B> '+ marker.properties.cname
+        +'<br><B>Title:</B> '+ marker.properties.ctitle
+        +'<br><B>Phone:</B> '+ marker.properties.cphone
+         +'<br><B>Email:</B> '+ marker.properties.cemail
         +'<br><B>Energy Rating:</B> '+ marker.properties.energyrati
         +'<br><B>Application Use:</B> '+ marker.properties.appuse
         + BIO1
@@ -264,12 +267,25 @@ map.on('load', function () {
         })
         
         gb.addEventListener('click', function() {
-        //  window.alert(marker.properties.name);
-        //   console.log(marker.properties);
+        
+        if (marker.properties.cname === undefined){ var C01 = ' '  ;}
+        else { var C01 = '<br><B>Name:</B> '+ marker.properties.cname;}
+        if (marker.properties.ctitle === undefined){ var C02 = ' '  ;}
+        else { var C02 = '<br><B>Title:</B> '+ marker.properties.ctitle;}
+        if (marker.properties.cphone === undefined){ var C03 = ' '  ;}
+        else { var C03 = '<br><B>Phone:</B> '+ marker.properties.cphone;}
+        if (marker.properties.cemail === undefined){ var C0
+            4 = ' '  ;}
+        else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
+
          var content = '<h4 style="color:white;background-color:#96c93d;padding: 3px;">'+ marker.properties.name+'</h4>'
-        +'<B>Certification Level:</B> '+ marker.properties.certificat  
+        +'<B><U>Contact Info</U></B>'
+        + C01
+        + C02
+        + C03
+        + C04
         +'<br><B>Developer:</B> '+ marker.properties.developer 
-        +'<br><B>Unique Features:</B> '+ marker.properties.uniquefeat
+        +'<br><B>Unique Features:</B> '+ marker.properties.unique
         ;
 
         if (marker.properties.photo1 === undefined){ var PHOTO1= " "  ;}

@@ -197,12 +197,21 @@ map.on('load', function () {
         if (marker.properties.bio4 === undefined){ var BIO4 = ' '  ;}
         else { var BIO4 = '&nbsp;'+ marker.properties.bio4;}
 
+         if (marker.properties.cname === undefined){ var C01 = ' '  ;}
+        else { var C01 = '<br><B>Name:</B> '+ marker.properties.cname;}
+        if (marker.properties.ctitle === undefined){ var C02 = ' '  ;}
+        else { var C02 = '<br><B>Title:</B> '+ marker.properties.ctitle;}
+        if (marker.properties.cphone === undefined){ var C03 = ' '  ;}
+        else { var C03 = '<br><B>Phone:</B> '+ marker.properties.cphone;}
+        if (marker.properties.cemail === undefined){ var C04 = ' '  ;}
+        else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
+
         var content = '<h4 style="color:white;background-color:#19bbb8;padding: 3px;">'+ marker.properties.name+'</h4>'
         +'<B><U>Contact Info</U></B>'
-        +'<br><B>Name:</B> '+ marker.properties.cname
-        +'<br><B>Title:</B> '+ marker.properties.ctitle
-        +'<br><B>Phone:</B> '+ marker.properties.cphone
-         +'<br><B>Email:</B> '+ marker.properties.cemail
+        + C01
+        + C02
+        + C03
+        + C04
         +'<br><B>Energy Rating:</B> '+ marker.properties.energyrati
         +'<br><B>Application Use:</B> '+ marker.properties.appuse
         + BIO1
@@ -274,8 +283,7 @@ map.on('load', function () {
         else { var C02 = '<br><B>Title:</B> '+ marker.properties.ctitle;}
         if (marker.properties.cphone === undefined){ var C03 = ' '  ;}
         else { var C03 = '<br><B>Phone:</B> '+ marker.properties.cphone;}
-        if (marker.properties.cemail === undefined){ var C0
-            4 = ' '  ;}
+        if (marker.properties.cemail === undefined){ var C04 = ' '  ;}
         else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
 
          var content = '<h4 style="color:white;background-color:#96c93d;padding: 3px;">'+ marker.properties.name+'</h4>'

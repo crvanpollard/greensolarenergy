@@ -206,11 +206,13 @@
     width: 35px;
     height: 42px;
     margin-right: 5px;
+    float:left;
     }
     .about-icon2 {
     width: 38px;
     height: 38px;
     margin-right: 5px;
+      float:left;
     }
     /* Layer Information */
     #info-stack {

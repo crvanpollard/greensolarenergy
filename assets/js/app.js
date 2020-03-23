@@ -51,6 +51,12 @@
         });
     });
 
+  //  map.on('click', function (e) {
+     //   alert("hello");
+    //    $('#info').html('');
+    //    $('#carousel-example-generic').html('');
+   // });
+
 map.on('load', function () {
 
         map.addLayer({

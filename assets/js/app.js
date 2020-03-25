@@ -51,6 +51,12 @@
         });
     });
 
+  //  map.on('click', function (e) {
+     //   alert("hello");
+    //    $('#info').html('');
+    //    $('#carousel-example-generic').html('');
+   // });
+
 map.on('load', function () {
 
         map.addLayer({
@@ -119,7 +125,7 @@ map.on('load', function () {
                 +'<br><B>Contact Name:</B> '+ marker.properties.cname
                // +'<br><B>Title:</B> '+ marker.properties.ctitle
                 +'<br><B>Phone:</B> '+ marker.properties.cphone
-                +'<br><B><U>Info</U></B>'
+                +'<br><B><U>Information</U></B>'
                // +'<br><B>Email:</B> '+ marker.properties.cemail
                 + BIO1
                 + BIO2
@@ -211,7 +217,7 @@ map.on('load', function () {
         + C02
         + C04
         + C03
-        +'<B><U>Info</U></B>'
+        +'<br><B><U>Information</U></B>'
         +'<br><B>Energy Rating:</B> '+ marker.properties.energyrati
         +'<br><B>Application Use:</B> '+ marker.properties.appuse
         + BIO1
@@ -387,6 +393,7 @@ map.on('load', function () {
             + C02
             + C03
             + C04
+            +'<br><B><U>Information</U></B>'
             +'<br><B>Production:</B> '+ marker.properties.production
             +'<br><B>Greenhouse Gas Emissions Avoided:</B> '+ marker.properties.GGEA
             + BIO1

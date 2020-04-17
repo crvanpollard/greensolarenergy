@@ -59,17 +59,24 @@
                 </div>
 
                 </div>
+
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                    <button type="button" style=" margin:10px 10px 0px 4px;float:right;color:#2e5c95;background-color:#d9dadc;" class="btn btn-sm"<a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;"><i class="fa fa-info-circle" style="color:#2e5c95"></i>&nbsp;&nbsp;<b>About</b></a></button>
+                    <button type="button" style=" margin:10px 10px 0px 4px;float:right;color:#2e5c95;background-color:#d9dadc;" class="btn btn-sm"<a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;"><i class="fa fa-info-circle" style="color:#2e5c95"></i>&nbsp;&nbsp;<b>About</b></a>
+                    </button>
                     </ul>
                 </div>
+
             </div>
-        </nav>
-    <div id="container">
-    
-        <div id="map" class="map"></div>
-        <div id="legend-stack">
+    </nav>
+ 
+
+<div class="row" id="container">
+
+    <div class="col-sm-4 col-lg-4" id="sidebar" style="padding: 10px; overflow: auto;">
+        <div class="panel-group">
+                   <!-- Legend -->
+          <div id="legend-stack">
             <div class="legend-icons" value="EI"  id="EI">
               <label>
               <input type="checkbox" checked id="EI" class="legend-check" name="layerTCDI">
@@ -94,16 +101,44 @@
               <img src="assets/img/legend/SPG_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
               </label>
             </div>  
+        </div> 
+        <!-- End Legend -->
+             <div id="inforesults" class="panel panel-primary">
+      
+                  <div class="panel-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="">
+                          <font color="white"><strong>Project Info</strong></font>
+                      </a>
+                  </div>
+
+              <div id="overlay-layers" class="panel-collapse collapse in">
+                  <div id="box" > </div>                 
+                  <div id="resultsheader" ></div>
+                  <div id='info' class='info'></div>
+                  <div id="carousel-example-generic" class="carousel" data-ride="carousel"></div>
+              </div>
+
+            </div>
+         </div> 
+
+        <div id="howto" class="alert alert-info alert-block nomobile" style="margin-top:10px;">
+            <button class="close" data-dismiss="alert" type="button">×</button>
+            <h3 style="margin: 0;">Navigating the Data</h3>
+            <p>This map allows you to track three types of Smart Growth development in the Greater Philadelphia Region: Developments Near Transit (DNT), Traditional Neighborhood Development (TND), and Conservation Subdivisions (CSD). </p>
+            <p>Use the buttons in the upper right hand corner of the map to select one of the three categories and then click on an individual pinpoint to learn more about a specific project. </p>
+            <p>You may zoom in and out of the map using the buttons in the upper left portion of the map. Use the button below the zoom controls to display the entire DVRPC region. You may choose to change the background of the map by using the button in the upper right portion of the map. </p>
         </div>
-        <div id="info-stack">
-            <div id='info' class='info'></div>
-            <div id="carousel-example-generic" class="carousel" data-ride="carousel"></div>
-        </div>
-        
-      </div>
+
     </div>
+    
+        <!-- Map -->
+    <div class="col-sm-8 col-lg-8" id="map"></div>
+
+</div>      
+<!-- Zoom -->
+      </div>
         <a href='javascript:void(0);' id='zoomtoregion'></a>
- </div>
+</div>
             <!-- About Modal -->
         <div class="modal fade" id="aboutModal">
                 <div class="modal-dialog">

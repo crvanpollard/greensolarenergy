@@ -121,8 +121,9 @@ map.on('load', function () {
             if (marker.properties.bio4 === undefined){ var BIO4 = ' '  ;}
             else { var BIO4 = '&nbsp;'+ marker.properties.bio4;}
 
-            var content = '<h4 style="color:white;background-color:#eb2226;padding: 3px;">'+ marker.properties.name+'</h4>'
-                +'<br><B>Contact Name:</B> '+ marker.properties.cname
+           var info ="<div>"+ marker.properties.name + "</div>";
+
+           var content = '<br><B>Contact Name:</B> '+ marker.properties.cname
                // +'<br><B>Title:</B> '+ marker.properties.ctitle
                 +'<br><B>Phone:</B> '+ marker.properties.cphone
                 +'<br><B><U>Information</U></B>'
@@ -145,6 +146,9 @@ map.on('load', function () {
             //      else { var Photo_Cred = "<div class='labelfieldsource'>"+ (props.Photo_Cred) +  "</div>";}
             var  content2 = PHOTO1
                      //   + Photo_Cred
+           
+            document.getElementById('resultsheader').innerHTML = info;
+            document.getElementById('resultsheader').className = 'rhEL';   
             document.getElementById('info').innerHTML = content;
             document.getElementById('carousel-example-generic').innerHTML = content2;
             $('.carousel').carousel('pause');
@@ -212,8 +216,8 @@ map.on('load', function () {
         if (marker.properties.cemail === undefined){ var C04 = ' '  ;}
         else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
 
-        var content = '<h4 style="color:white;background-color:#19bbb8;padding: 3px;">'+ marker.properties.name+'</h4>'
-        + C01
+        var info ="<div>"+ marker.properties.name + "</div>";
+        var content = C01
         + C02
         + C04
         + C03
@@ -233,6 +237,9 @@ map.on('load', function () {
         //      else { var Photo_Cred = "<div class='labelfieldsource'>"+ (props.Photo_Cred) +  "</div>";}
         var  content2 = PHOTO1
                  //   + Photo_Cred
+
+        document.getElementById('resultsheader').innerHTML = info;
+        document.getElementById('resultsheader').className = 'rhES';           
         document.getElementById('info').innerHTML = content;
         document.getElementById('carousel-example-generic').innerHTML = content2;
         $('.carousel').carousel('pause');
@@ -292,8 +299,8 @@ map.on('load', function () {
         if (marker.properties.cemail === undefined){ var C04 = ' '  ;}
         else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
 
-         var content = '<h4 style="color:white;background-color:#96c93d;padding: 3px;">'+ marker.properties.name+'</h4>'
-        + C01
+        info = '<div>'+ marker.properties.name+'</div>'
+        var content = C01
         + C02
         + C04
         + C03
@@ -314,6 +321,8 @@ map.on('load', function () {
         //      else { var Photo_Cred = "<div class='labelfieldsource'>"+ (props.Photo_Cred) +  "</div>";}
         var  content2 = PHOTO1
                  //   + Photo_Cred
+        document.getElementById('resultsheader').innerHTML = info;
+        document.getElementById('resultsheader').className = 'rhGB';  
         document.getElementById('info').innerHTML = content;
         document.getElementById('carousel-example-generic').innerHTML = content2;
         $('.carousel').carousel('pause');

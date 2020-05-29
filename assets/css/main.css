@@ -1,25 +1,33 @@
-    html, body, #map{
+    html, body, #map, #sidebar {
     height: 100%;
     margin: 0px;
+    }
+    body {
+    overflow: hidden ;
     }
    #container {
     height: 100%;
     margin-top: 50px;
+    margin-right: -4px;
+    padding-bottom: 50px;
     }
     #map{
     height: 100%;
     margin: 0px;
     padding-left: 0px !important;
     }
-    #sidebar {    
-    height: 100%;
-    margin: 0px; 
+    #sidebar {  
     border-right: 1px solid #E2E2E2;
     background-color:#ffffff;
     }
     .navbar-brand {
     padding: 8px 15px;
     line-height: 20px;
+    }
+    .panel-group .panel {
+        margin-top: -11px;
+        overflow: auto;
+        border-radius: 0px;
     }
     #header-link{
     display: flex;
@@ -81,8 +89,8 @@
     }
     #zoomtoregion{
     position: absolute;
-    top:130px;
-    right:12px;
+    top:160px;
+    right:6px;
     z-index:100;
     background-color:white;
     color:black;
@@ -201,8 +209,13 @@
       margin: 5px 0px 5px 5px;
       max-height: 100%;
     }
-    #inforesults{
-        margin-left: 10px;
+    #inforesults {
+        margin: 5px 0px 0px 10px;
+        border-radius: 4px;
+        border-color: #dadada;
+    }
+    #howto {
+        margin-left: 14px !important;
     }
     .about-icon {
     width: 35px;
@@ -283,4 +296,4 @@
 .rhEL {background-color:#eb2226;color:white;font-size: 18px;}
 .rhES {background-color:#19bbb8;color:white;font-size: 18px;}
 .rhGB {background-color:#96c93d;color:white;font-size: 18px;}
-.rhSPG {background-color: #F15A29;color:white;font-size: 18px;}
+.rhSPG {background-color: #fdbf12;color:white;font-size: 18px;}

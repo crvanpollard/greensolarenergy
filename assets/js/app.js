@@ -14,8 +14,8 @@
         style: 'mapbox://styles/mapbox/light-v9', 
         center: [ -75.170669,39.950143], 
         bearing: 0, // Rotate Philly ~9° off of north, thanks Billy Penn.
-        pitch: 35,
-        zoom: 9,
+        pitch: 20,
+        zoom: 8,
         attributionControl: false
     });
 
@@ -27,10 +27,10 @@
         if (p > 0) {
           map.flyTo({
             center: [-75.170669,39.950143], 
-            zoom: 9,
+            zoom: 8,
             speed: 0.1,
             bearing: 0,
-            pitch: 35
+            pitch: 20
           });
         }
       }
@@ -44,10 +44,10 @@
     document.getElementById('zoomtoregion').addEventListener('click', function () {
         map.flyTo({
             center: [ -75.170669,39.950143], 
-                zoom: 9,
+                zoom: 8,
                 speed: 0.5,
                 bearing: 0,
-                pitch: 35
+                pitch: 20
         });
     });
 
@@ -123,7 +123,7 @@ map.on('load', function () {
 
            var info ="<div>"+ marker.properties.name + "</div>";
 
-           var content = '<br><B>Contact Name:</B> '+ marker.properties.cname
+           var content = '<B>Contact Name:</B> '+ marker.properties.cname
                // +'<br><B>Title:</B> '+ marker.properties.ctitle
                 +'<br><B>Phone:</B> '+ marker.properties.cphone
                 +'<br><B><U>Information</U></B>'
@@ -155,8 +155,9 @@ map.on('load', function () {
 
             map.flyTo({
             center: marker.geometry.coordinates,
-            pitch: 50,
-            zoom: 14
+            pitch: 20,
+            speed: 0.5,
+            zoom: 12
                 });
             });
 
@@ -208,7 +209,7 @@ map.on('load', function () {
         else { var BIO4 = '&nbsp;'+ marker.properties.bio4;}
 
         if (marker.properties.cname === undefined){ var C01 = ' '  ;}
-        else { var C01 = '<br><B>Contact Name:</B> '+ marker.properties.cname;}
+        else { var C01 = '<B>Contact Name:</B> '+ marker.properties.cname;}
         if (marker.properties.ctitle === undefined){ var C02 = ' '  ;}
         else { var C02 = ', '+ marker.properties.ctitle;}
         if (marker.properties.cphone === undefined){ var C03 = ' '  ;}
@@ -246,8 +247,9 @@ map.on('load', function () {
 
         map.flyTo({
         center: marker.geometry.coordinates,
-        pitch: 50,
-        zoom: 14
+        pitch: 20,
+        speed: 0.5,
+        zoom: 12
             });
         });
 
@@ -329,8 +331,9 @@ map.on('load', function () {
 
         map.flyTo({
         center: marker.geometry.coordinates,
-        pitch: 50,
-        zoom: 14
+        pitch: 20,
+        speed: 0.5,
+        zoom: 12
             });
         });
 
@@ -387,7 +390,7 @@ map.on('load', function () {
             else { var BIO4 = '&nbsp;'+ marker.properties.bio4;}
 
             if (marker.properties.cname === undefined){ var C01 = ' '  ;}
-            else { var C01 = '<br><B>Name:</B> '+ marker.properties.cname;}
+            else { var C01 = '<B>Name:</B> '+ marker.properties.cname;}
             if (marker.properties.ctitle === undefined){ var C02 = ' '  ;}
             else { var C02 = ', '+ marker.properties.ctitle;}
             if (marker.properties.cphone === undefined){ var C03 = ' '  ;}
@@ -395,10 +398,8 @@ map.on('load', function () {
             if (marker.properties.cemail === undefined){ var C04 = ' '  ;}
             else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
 
-
-            var content = '<h4 style="color:white;background-color:#fdbf12;padding: 3px;">'+ marker.properties.name+'</h4>'
-            +'<B><U>Contact Info</U></B>'
-            + C01
+            info = '<div>'+ marker.properties.name+'</div>'
+            var content = C01
             + C02
             + C03
             + C04
@@ -423,15 +424,17 @@ map.on('load', function () {
          //   else { var Photo_Cred = "<div class='labelfieldsource'>"+ (marker.properties.credit_1) +  "</div>";}
             var  content2 = PHOTO1
             //    + Photo_Cred;
-
+            document.getElementById('resultsheader').innerHTML = info;
+            document.getElementById('resultsheader').className = 'rhSPG';  
             document.getElementById('info').innerHTML = content;
             document.getElementById('carousel-example-generic').innerHTML = content2;
             $('.carousel').carousel('pause');
 
             map.flyTo({
             center: marker.geometry.coordinates,
-            pitch: 50,
-            zoom: 14
+            pitch: 20,
+            speed: 0.5,
+            zoom: 12
                 });
             });
 

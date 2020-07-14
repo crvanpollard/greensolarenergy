@@ -308,6 +308,7 @@ map.on('load', function () {
         + C03
         +'<br><B><U>Information</U></B>'
         +'<br><B>Developer:</B> '+ marker.properties.developer 
+        +'<br><B>Certification Level:</B> '+ marker.properties.certificat
         +'<br><B>Unique Features:</B> '+ marker.properties.unique
         ;
 
@@ -404,7 +405,7 @@ map.on('load', function () {
             + C03
             + C04
             +'<br><B><U>Information</U></B>'
-            +'<br><B>Production:</B> '+ marker.properties.production
+            +'<br><B>Annual Production:</B> '+ marker.properties.production
             +'<br><B>Greenhouse Gas Emissions Avoided:</B> '+ marker.properties.GGEA
             + BIO1
             + BIO2

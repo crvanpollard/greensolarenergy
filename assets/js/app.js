@@ -4,7 +4,7 @@
     var GB;
     var geojson;
 
- // $('#aboutModal').modal('show');
+  $('#aboutModal').modal('show');
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiY3J2YW5wb2xsYXJkIiwiYSI6ImNqMHdvdnd5MTAwMWEycXBocm4zbXVjZm8ifQ.3zjbFccILu6mL7cOTtp40A';
 

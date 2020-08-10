@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+       <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="description" content="version 1.0.0">
+        <meta name="author" content="DVRPC">   
     
-      <title>Energy Use and Greenhouse Gas Emissions Reduction Projects in Greater Philadelphia</title>
+        <title>Energy Use and Greenhouse Gas Emissions Reduction Projects in Greater Philadelphia</title>
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+       <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="assets/css/main.css">
@@ -15,13 +23,15 @@
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  -->
 
-      <!-- Upgrading the jquery and jquery UI verison with the latest CDN versions-->
-      <script  src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+      <!-- Upgrading the jquery and jquery UI verison with the latest CDN versions
+      <script  src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>-->
 
-      <!-- Latest compiled and minified JavaScript 
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+      <!--   <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
 
       <script src="assets/data/EI.js"></script>
       <script src="assets/data/ES.js"></script>
@@ -80,25 +90,25 @@
             <div class="legend-icons" value="EI"  id="EI">
               <label>
               <input type="checkbox" checked id="EI" class="legend-check" name="layerTCDI">
-              <img src="assets/img/legend/EI_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
+              <img src="assets/img/legend/EI_L.png" alt="Energy Innovation logo" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
               </label>
             </div>  
             <div class="legend-icons" value="ES"  id="ES">
               <label>
               <input type="checkbox" checked id="ES" class="legend-check" name="layerTCDI">
-              <img src="assets/img/legend/ES_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
+              <img src="assets/img/legend/ES_L.png" alt="Energy Storage logo"class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
               </label>
             </div> 
             <div class="legend-icons" value="GB"  id="GB">
               <label>
               <input type="checkbox" checked id="GB" class="legend-check" name="layerTCDI">
-              <img src="assets/img/legend/GB_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
+              <img src="assets/img/legend/GB_L.png" alt="Green Building logo"class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
               </label>
             </div> 
             <div class="legend-icons" value="SPG"  id="SPG">
               <label>
               <input type="checkbox" checked id="SPG" class="legend-check" name="layerTCDI">
-              <img src="assets/img/legend/SPG_L.png" class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
+              <img src="assets/img/legend/SPG_L.png" alt="Solar Power Generator logo"class="legend-button" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" data-title="Click to toggle 2015 Projects"/>
               </label>
             </div>  
         </div> 
@@ -123,7 +133,7 @@
             <button class="close" data-dismiss="alert" type="button">×</button>
             <h3 style="margin: 0;">Navigating the Data</h3>
             <p>This map showcases four categories of projects in the DVRPC region that reduce energy use and greenhouse gas emissions. Clicking on a project will display detailed information, pictures, and some of the ways projects are reducing energy use and greenhouse gas emissions.</p>
-            <p><b><u>DVRPC is actively seeking additions to this map!</u></b> Please contact Adam Beam (<a class="one" href="mailto:abeam@dvrpc.org"> abeam@dvrpc.org </a>) if you are aware of a project to be considered for inclusion. In addition, please contact Adam if you are the owner or operator of a project on this map and would like to correct or update information, or if you would like the project removed. </p>
+            <p><b>DVRPC is actively seeking additions to this map!</b> Please contact Adam Beam (<a class="one" href="mailto:abeam@dvrpc.org"> abeam@dvrpc.org </a>) if you are aware of a project to be considered for inclusion. In addition, please contact Adam if you are the owner or operator of a project on this map and would like to correct or update information, or if you would like the project removed. Data for these locations were compiled by DVRPC through various online sources.</p>
         </div>
 
     </div>
@@ -142,7 +152,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h5 class="modal-title">Energy Use and Greenhouse Gas Emissions Reduction Projects in Greater Philadelphia</h5>
+                            <h4 class="modal-title">Energy Use and Greenhouse Gas Emissions Reduction Projects in Greater Philadelphia</h4>
                         </div>
                         <div class="modal-body">
                              <ul id="aboutTabs" class="nav nav-tabs">
@@ -154,18 +164,18 @@
                                 <div class="tab-pane fade active in" id="about">
                                      <div><p>This map showcases projects in the DVRPC region that reduce energy use and greenhouse gas emissions. Clicking on a project opens a box with detailed information about the project.<br><br> There are four categories of projects:<br><br>
 
-                                      <img src="assets/css/img/SPG.png" class="about-icon"/><B>Solar Power Generation</B> - These are projects with installations of large arrays of solar photovoltaic panels. These installations generate clean energy, both for use at the facilities where they are installed and for contributing to the region’s electrical grid. This helps lower carbon dioxide and other emissions for the region by replacing the use of fossil fuels like coal and natural gas in electricity generation.<br><br>
+                                      <img src="assets/css/img/SPG.png" alt="Solar Power Generator logo" class="about-icon"/><B>Solar Power Generation</B> - These are projects with installations of large arrays of solar photovoltaic panels. These installations generate clean energy, both for use at the facilities where they are installed and for contributing to the region’s electrical grid. This helps lower carbon dioxide (CO<sub>2</sub>e) and other emissions for the region by replacing the use of fossil fuels like coal and natural gas in electricity generation.<br><br>
 
-                                      <img src="assets/css/img/ES.png" class="about-icon"/><B>Energy Storage</B> - These projects use batteries or other technologies to store electricity. These projects can be tied to renewable energy systems or can harvest waste energy. These storage projects increase resiliency by allowing access to electricity during power outages. Storage can also provide new revenue streams for project owners by allowing them to participate in PJM’s frequency regulation market.<br><br> 
+                                      <img src="assets/css/img/ES.png" alt="Energy Storage logo"class="about-icon"/><B>Energy Storage</B> - These projects use batteries or other technologies to store electricity. These projects can be tied to renewable energy systems or can harvest waste energy. These storage projects increase resiliency by allowing access to electricity during power outages. Storage can also provide new revenue streams for project owners by allowing them to participate in PJM’s frequency regulation market.<br><br> 
 
-                                      <img src="assets/css/img/GB.png" class="about-icon"/><B>Green Buildings</B> - The projects in this category are all certified LEED Gold or LEED Platinum 
+                                      <img src="assets/css/img/GB.png" alt="Green Building logo" class="about-icon"/><B>Green Buildings</B> - The projects in this category are all certified LEED Gold or LEED Platinum 
                                       buildings. Many organizations have incorporated green building practices into their properties in order to curb energy costs by reducing energy usage and their consequent greenhouse gas emissions. These practices include green roofs, geothermal HVAC systems, insulation, and other retrofits to ensure the building uses as little energy as possible. These greening measures provide many additional benefits to the building owners, operators, and occupants.<br><br> 
 
-                                      <img src="assets/css/img/EI.png" class="about-icon2"/><B>Energy Innovation</B> - Energy innovation projects across the region have found new ways for ways to improve current processes or use new technologies that boost efficiency and reduce energy use. Some of these projects involve using waste streams to increase available energy. Others include new technologies that reduce energy consumption and greenhouse gas emissions. <br><br>
+                                      <img src="assets/css/img/EI.png" alt="Energy Innovation logo" class="about-icon2"/><B>Energy Innovation</B> - Energy innovation projects across the region have found new ways for ways to improve current processes or use new technologies that boost efficiency and reduce energy use. Some of these projects involve using waste streams to increase available energy. Others include new technologies that reduce energy consumption and greenhouse gas emissions. <br><br>
                                       
                                       Click on the symbols on the map to see some of the ways the region is reducing energy use and greenhouse gas emissions.  
                                       <br><br>
-                                      <p><b><u>DVRPC is actively seeking additions to this map!</u></b> Please contact Adam Beam at <a href="mailto:abeam@dvrpc.org">abeam@dvrpc.org</a>  if you are aware of a project to be considered for inclusion on this map. In addition, please contact Adam if you are the owner or operator of a project on this map and would like to correct or update information, or if you would like the project removed.</p>
+                                      <p><b>DVRPC is actively seeking additions to this map!</b> Please contact Adam Beam at <a href="mailto:abeam@dvrpc.org" class="one">abeam@dvrpc.org</a>  if you are aware of a project to be considered for inclusion on this map. In addition, please contact Adam if you are the owner or operator of a project on this map and would like to correct or update information, or if you would like the project removed. Data for these locations were compiled by DVRPC through various online sources.</p>
                                     </div>                                 
                                 </div>
                                 <div class="tab-pane fade" id="contact"> 
@@ -173,7 +183,7 @@
                                         <h4>For more information, contact:</h4>
                                             <address>
                                             Adam Beam, Research Analyst, Office of Energy and Climate Change Initiatives<br/>
-                                            <a href="mailto:abeam@dvrpc.org">abeam@dvrpc.org</a><br/>
+                                            <a href="mailto:abeam@dvrpc.org" class="one">abeam@dvrpc.org</a><br/>
                                             (215) 238-2830
                                             </address>
                                         </p>  
@@ -184,7 +194,7 @@
                                         information provided herein. DVRPC and partner state, local, and other agencies shall assume no liability for errors, omissions, or 
                                         inaccuracies in the information provided regardless of how caused; or any decision made or action taken or not taken by any person relying 
                                         on any information or data furnished within.</p>
-                                        <p>For more information, visit <a href="https://www.dvrpc.org/Policies/" target="_blank">https://www.dvrpc.org/Policies/</a></p>
+                                        <p>For more information, visit <a href="https://www.dvrpc.org/Policies/" target="_blank" class="one">https://www.dvrpc.org/Policies/</a></p>
                                 </div>
                             </div>
                         </div>

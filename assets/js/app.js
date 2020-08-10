@@ -113,7 +113,7 @@ map.on('load', function () {
             //  window.alert(marker.properties.name);
             //   console.log(marker.properties);
             if (marker.properties.bio1 === undefined){ var BIO1 = ' '  ;}
-            else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio1;}
+            else { var BIO1 = '<B>Description:</B> '+ marker.properties.bio1;}
             if (marker.properties.bio2 === undefined){ var BIO2 = ' '  ;}
             else { var BIO2 = '&nbsp;'+ marker.properties.bio2;}
             if (marker.properties.bio3 === undefined){ var BIO3 = ' '  ;}
@@ -121,12 +121,12 @@ map.on('load', function () {
             if (marker.properties.bio4 === undefined){ var BIO4 = ' '  ;}
             else { var BIO4 = '&nbsp;'+ marker.properties.bio4;}
 
-           var info ="<div>"+ marker.properties.name + "</div>";
+           var info ="<H4>"+ marker.properties.name + "</h4>";
 
            var content = '<B>Contact Name:</B> '+ marker.properties.cname
                // +'<br><B>Title:</B> '+ marker.properties.ctitle
                 +'<br><B>Phone:</B> '+ marker.properties.cphone
-                +'<br><B><U>Information</U></B>'
+                +'<br><H4><B><U>Information</U></B></H4>'
                // +'<br><B>Email:</B> '+ marker.properties.cemail
                 + BIO1
                 + BIO2
@@ -217,13 +217,13 @@ map.on('load', function () {
         if (marker.properties.cemail === undefined){ var C04 = ' '  ;}
         else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
 
-        var info ="<div>"+ marker.properties.name + "</div>";
+        var info ="<h4>"+ marker.properties.name + "</h4>";
         var content = C01
         + C02
         + C04
         + C03
-        +'<br><B><U>Information</U></B>'
-        +'<br><B>Energy Rating:</B> '+ marker.properties.energyrati
+        +'<br><h4><b><U>Information</U></b></h4>'
+        +'<B>Energy Rating:</B> '+ marker.properties.energyrati
         +'<br><B>Application Use:</B> '+ marker.properties.appuse
         + BIO1
         + BIO2
@@ -301,13 +301,13 @@ map.on('load', function () {
         if (marker.properties.cemail === undefined){ var C04 = ' '  ;}
         else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
 
-        info = '<div>'+ marker.properties.name+'</div>'
+        info = '<H4>'+ marker.properties.name+'</H4>'
         var content = C01
         + C02
         + C04
         + C03
-        +'<br><B><U>Information</U></B>'
-        +'<br><B>Developer:</B> '+ marker.properties.developer 
+        +'<br><H4><B><U>Information</U></B></H4>'
+        +'<B>Developer:</B> '+ marker.properties.developer 
         +'<br><B>Certification Level:</B> '+ marker.properties.certificat
         +'<br><B>Unique Features:</B> '+ marker.properties.unique
         ;
@@ -399,13 +399,13 @@ map.on('load', function () {
             if (marker.properties.cemail === undefined){ var C04 = ' '  ;}
             else { var C04 = '<br><B>Email:</B> '+ marker.properties.cemail ;} 
 
-            info = '<div>'+ marker.properties.name+'</div>'
+            info = '<H4>'+ marker.properties.name+'</H4>'
             var content = C01
             + C02
             + C03
             + C04
-            +'<br><B><U>Information</U></B>'
-            +'<br><B>Annual Production:</B> '+ marker.properties.production
+            +'<br><H4><B><u>Information</U></B></H4>'
+            +'<B>Annual Production:</B> '+ marker.properties.production
             +'<br><B>Greenhouse Gas Emissions Avoided:</B> '+ marker.properties.GGEA
             + BIO1
             + BIO2

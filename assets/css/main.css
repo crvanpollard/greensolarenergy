@@ -213,6 +213,7 @@
         margin: 5px 0px 0px 10px;
         border-radius: 4px;
         border-color: #dadada;
+        background-color: #eeeeee;
     }
     #howto {
         margin-left: 14px !important;
@@ -276,6 +277,9 @@
     width:100%;
     padding:5px 10px 5px 10px;
     }  
+    .one{
+        color:#396ab2;
+    }
     #box {
     background-color:none;
     height:50px;

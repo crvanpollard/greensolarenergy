@@ -134,11 +134,12 @@ map.on('load', function () {
             ;
 
             if (marker.properties.photo1 === undefined){ var PHOTO1= " "  ;}
-            else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>"
-            +"<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>"
-            +"<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>"
-            +"<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div></div>"
-            +" <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
+            else { var PHOTO1 = "<div class='carousel-inner'>"+"<div class='item active'><img src='"+ (marker.properties.photo1) +"' alt='property photo'></div>";}
+            if (marker.properties.photo2 !== undefined){ PHOTO1 += "<div class='item'><img src='"+ (marker.properties.photo2) + "' alt='property photo'></div>";}
+            if (marker.properties.photo3 !== undefined){ PHOTO1 += "<div class='item'><img src='"+ (marker.properties.photo3) + "' alt='property photo'></div>";}
+            if (marker.properties.photo4 !== undefined){ PHOTO1 += "<div class='item'><img src='"+ (marker.properties.photo4) + "' alt='property photo'></div>";}
+            if (marker.properties.photo1 !== undefined){ PHOTO1 += "</div>";}
+            if (marker.properties.photo2 !== undefined){ PHOTO1 += " <a class='left carousel-control' href='#carousel-example-generic' data-slide='prev'>"+"<span class='glyphicon glyphicon-chevron-left'></span>"
             +" </a>"+" <a class='right carousel-control' href='#carousel-example-generic' data-slide='next'>"+
             "<span class='glyphicon glyphicon-chevron-right'></span>"+"</a>" ;}
             //      if (props.Photo_Cred===undefined){ var Photo_Cred = " "  ;}

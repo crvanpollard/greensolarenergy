@@ -70,7 +70,7 @@ map.on('load', function () {
             "layout": {},
             "paint": {
                 'line-width': 2,
-                'line-color': '#434343'
+                'line-color': '#5d5d5d'
             },
             "filter": [
                     "==",

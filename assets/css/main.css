@@ -25,9 +25,9 @@
     line-height: 20px;
     }
     .panel-group .panel {
-        margin-top: -11px;
-        overflow: auto;
-        border-radius: 0px;
+    margin-top: -11px;
+    overflow: auto;
+    border-radius: 0px;
     }
     #header-link{
     display: flex;
@@ -36,8 +36,8 @@
     text-decoration: none;
     }
     #dvrpc-logo{
-        margin: 5px 0px 0px 0px;
-        height:30px;
+    margin: 5px 0px 0px 0px;
+    height:30px;
     }
     #header-link-text{
     font-size: 20px;
@@ -103,7 +103,7 @@
     text-decoration:none;
     background-image: url(https://raw.githubusercontent.com/dvrpc/license-plate-survey/master/src/img/dvrpc_bug.png);
     background-size: 27px 27px;
-     background-position: center; 
+    background-position: center; 
     background-repeat: no-repeat;
     height: 27px;
     width: 27px;
@@ -315,4 +315,10 @@
     }
     #about_footer{
       background-color: #b9def0; 
+      border-radius: 4px;
+      border: 1px solid transparent;
+    }
+    #about_footer p{
+        margin:0px 0px 0px 10px;
+        padding:5px;
     }

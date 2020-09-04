@@ -212,7 +212,11 @@
     width: 38px;
     height: 38px;
     margin-right: 5px;
-      float:left;
+    float:left;
+    }
+    .dvrpc_full_logo {
+    margin: 10px 15px 6px 5px;
+    float:left;
     }
     /* Layer Information */
     #info-stack {
@@ -322,3 +326,15 @@
         margin:0px 0px 0px 10px;
         padding:5px;
     }
+    .hr1
+    {
+    border-top: 1px solid #000;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    }
+    .labelfieldsource{
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 10px;
+line-height: 1.42857;
+color: #333;
+font-style: italic;}

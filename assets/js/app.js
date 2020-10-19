@@ -200,7 +200,7 @@ map.on('load', function () {
         //  window.alert(marker.properties.name);
         //   console.log(marker.properties);
         if (marker.properties.bio1 === undefined){ var BIO1 = ' '  ;}
-        else { var BIO1 = '<B>Description:</B> '+ marker.properties.bio1;}
+        else { var BIO1 = '<br><B>Description:</B> '+ marker.properties.bio1;}
         if (marker.properties.bio2 === undefined){ var BIO2 = ' '  ;}
         else { var BIO2 = '&nbsp;'+ marker.properties.bio2;}
         if (marker.properties.bio3 === undefined){ var BIO3 = ' '  ;}

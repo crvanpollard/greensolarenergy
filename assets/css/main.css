@@ -260,12 +260,7 @@
     border: 1px solid transparent;
     border-radius: 4px;
     }   
-    #resultsheader{
-    height:100%;
-    width:100%;
-    color:#333;
-    padding:5px 10px 5px 10px;
-    }  
+     
     .one{
         color:#396ab2;
     }
@@ -285,11 +280,17 @@
     .carousel {
         padding:5px;
     }
-
-    .rhEL {background-color:#eb2226;color:white;font-size: 18px;}
-    .rhES {background-color:#19bbb8;color:white;font-size: 18px;}
-    .rhGB {background-color:#96c93d;color:white;font-size: 18px;}
-    .rhSPG {background-color: #fdbf12;color:white;font-size: 18px;}
+    #resultsheader{
+    color:#333;
+    margin: 0px 10px 0px 10px;
+    font-size: 18px;
+    } 
+    .rhEL {
+     border-bottom: 8px solid #eb2226
+    }
+    .rhES {border-bottom: 8px solid #19bbb8;}
+    .rhGB {border-bottom: 8px solid #96c93d;}
+    .rhSPG {border-bottom: 8px solid #fdbf12;}
 
     #EI_legend{
         height:100px;
